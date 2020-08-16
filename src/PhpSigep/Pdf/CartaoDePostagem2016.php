@@ -456,14 +456,11 @@ class CartaoDePostagem2016
     private function _($str)
     {
         $replaces = array(
-            '?' => 'a',
+            'ã' => 'a',
+            '?' => 'a'
         );
         $str = str_replace(array_keys($replaces), array_values($replaces), $str);
-        if (extension_loaded('iconv')) {
-            return iconv('UTF-8', 'ISO-8859-1', $str);
-        } else {
-            return utf8_decode($str);
-        }
+        return $str;
     }
 
     private function init()
