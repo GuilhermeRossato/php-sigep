@@ -8,3 +8,5 @@ composer.lock
 .buildpath
 .project
 .settings/
+
+src/PhpSigep/Model/AccessDataProducao.php
