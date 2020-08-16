@@ -4,11 +4,9 @@ namespace PhpSigep\Services\Real;
 use PhpSigep\Model\Etiqueta;
 use PhpSigep\Model\RastrearObjetoEvento;
 use PhpSigep\Model\RastrearObjetoResultado;
-use PhpSigep\Services\Real\Exception\RastrearObjeto\ExibirErrosException;
 use PhpSigep\Services\Real\Exception\RastrearObjeto\RastrearObjetoException;
 use PhpSigep\Services\Real\Exception\RastrearObjeto\TipoInvalidoException;
 use PhpSigep\Services\Result;
-use Symfony\Polyfill\Php56\Php56;
 
 /**
  * @author: Stavarengo
