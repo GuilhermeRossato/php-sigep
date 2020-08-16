@@ -98,8 +98,7 @@ class Carta extends AbstractChancela
         $y1 = $y + $h - 6 / $k;
         $pdf->Line($x1, $y1, $x2, $y1);
         $pdf->SetFontSize(9);
-        $circularText = new CircularText();
-        $circularText->CircularText($pdf, $x + $wRect / 2 + .5, ($y / $k) - 50, 80, $text, 'bottom', 110);
+        $circularText = new CircularText($pdf, $x + $wRect / 2 + .5, ($y / $k) - 50, 80, $text, 'bottom', 110);
 
         $pdf->restoreLastState();
     }
