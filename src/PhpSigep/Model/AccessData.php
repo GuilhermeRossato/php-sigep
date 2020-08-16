@@ -181,7 +181,7 @@ class AccessData extends AbstractModel
             $diretoria = new Diretoria($diretoria);
         }
         if (!($diretoria instanceof Diretoria)) {
-            throw new InvalidArgument('A Diretoria deve ser ser uma instÃ¢ncia de \PhpSigep\Model\Diretoria.');
+            throw new InvalidArgument('A Diretoria deve ser ser uma instância de \PhpSigep\Model\Diretoria.');
         }
         $this->diretoria = $diretoria;
     }

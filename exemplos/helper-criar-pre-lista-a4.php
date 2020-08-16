@@ -1,13 +1,13 @@
 <?php
 /**
- * Este script cria e retorna uma instÃ¢ncia de {@link \PhpSigep\Model\PreListaDePostagem}
+ * Este script cria e retorna uma instância de {@link \PhpSigep\Model\PreListaDePostagem}
  *
  * Como existe mais de um exemplo que precisa de uma {@link \PhpSigep\Model\PreListaDePostagem}, esse script foi criado
- * para compartilhar o cÃ³digo necessÃ¡rio para a criaÃ§Ã£o da {@link \PhpSigep\Model\PreListaDePostagem}.
+ * para compartilhar o código necessário para a criação da {@link \PhpSigep\Model\PreListaDePostagem}.
  */
 
 
-// ***  DADOS DA ENCOMENDA QUE SERÃ DESPACHADA *** //
+// ***  DADOS DA ENCOMENDA QUE SERÁ DESPACHADA *** //
     $dimensao = new \PhpSigep\Model\Dimensao();
     $dimensao->setAltura(20);
     $dimensao->setLargura(20);
@@ -19,7 +19,7 @@
     $destinatario->setNome('Google Belo Horizonte');
     $destinatario->setLogradouro('Av. Bias Fortes');
     $destinatario->setNumero('382');
-    $destinatario->setComplemento('6Âº andar');
+    $destinatario->setComplemento('6º andar');
 
     $destino = new \PhpSigep\Model\DestinoNacional();
     $destino->setBairro('Lourdes');
@@ -29,14 +29,14 @@
     $destino->setNumeroNotaFiscal(1234567890);
     $destino->setNumeroPedido(1234567890);
 
-    // Estamos criando uma etique falsa, mas em um ambiente real voÃ§Ãª deve usar o mÃ©todo
-    // {@link \PhpSigep\Services\SoapClient\Real::solicitaEtiquetas() } para gerar o nÃºmero das etiquetas
+    // Estamos criando uma etique falsa, mas em um ambiente real voçê deve usar o método
+    // {@link \PhpSigep\Services\SoapClient\Real::solicitaEtiquetas() } para gerar o número das etiquetas
     $etiqueta = new \PhpSigep\Model\Etiqueta();
     $etiqueta->setEtiquetaSemDv('PD73958096BR');
 
     $servicoAdicional = new \PhpSigep\Model\ServicoAdicional();
     $servicoAdicional->setCodigoServicoAdicional(\PhpSigep\Model\ServicoAdicional::SERVICE_REGISTRO);
-    // Se nÃ£o tiver valor declarado informar 0 (zero)
+    // Se não tiver valor declarado informar 0 (zero)
     $servicoAdicional->setCodigoServicoAdicional(\PhpSigep\Model\ServicoAdicional::SERVICE_AVISO_DE_RECEBIMENTO);
 
     $servicoAdicional2 = new \PhpSigep\Model\ServicoAdicional();
@@ -53,18 +53,18 @@
     $encomenda->setPeso(0.500);// 500 gramas
     $encomenda->setObservacao('Lorem ipsum dolor sit amet.');
     $encomenda->setServicoDePostagem(new \PhpSigep\Model\ServicoDePostagem(\PhpSigep\Model\ServicoDePostagem::SERVICE_PAC_41068));
-// ***  FIM DOS DADOS DA ENCOMENDA QUE SERÃ DESPACHADA *** //
+// ***  FIM DOS DADOS DA ENCOMENDA QUE SERÁ DESPACHADA *** //
 
 // *** DADOS DO REMETENTE *** //
     $remetente = new \PhpSigep\Model\Remetente();
-    $remetente->setNome('Google SÃ£o Paulo');
+    $remetente->setNome('Google São Paulo');
     $remetente->setLogradouro('Av. Brigadeiro Faria Lima');
     $remetente->setNumero('3900');
-    $remetente->setComplemento('5Âº andar');
+    $remetente->setComplemento('5º andar');
     $remetente->setBairro('Itaim');
     $remetente->setCep('04538-132');
     $remetente->setUf('SP');
-    $remetente->setCidade('SÃ£o Paulo');
+    $remetente->setCidade('São Paulo');
 // *** FIM DOS DADOS DO REMETENTE *** //
 
 

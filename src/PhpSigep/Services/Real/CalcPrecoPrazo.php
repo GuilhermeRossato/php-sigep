@@ -44,7 +44,7 @@ class CalcPrecoPrazo
                 $comprimentoMinimo = 18;
                 $diametroMinimo    = 5;
             } else {
-                throw new Exception('Tipo de embalagem "' . $tipoEmbalagem . '" nÃ£o reconhecido.');
+                throw new Exception('Tipo de embalagem "' . $tipoEmbalagem . '" não reconhecido.');
             }
         }
 
@@ -58,7 +58,7 @@ class CalcPrecoPrazo
                 $maoPropria = true;
             } else if ($servicoAdicional->is(ServicoAdicional::SERVICE_VALOR_DECLARADO_SEDEX) || $servicoAdicional->is(ServicoAdicional::SERVICE_VALOR_DECLARADO_PAC)) {
                 if (!$servicoAdicional->getValorDeclarado()) {
-                    throw new Exception('Para usar o serviÃ§o "valor declarado" Ã© necessÃ¡rio declarar o valor da mercadoria.');
+                    throw new Exception('Para usar o serviço "valor declarado" é necessário declarar o valor da mercadoria.');
                 }
                 $valorDeclarado = $servicoAdicional->getValorDeclarado();
             } else if ($servicoAdicional->is(ServicoAdicional::SERVICE_AVISO_DE_RECEBIMENTO)) {
@@ -164,9 +164,9 @@ class CalcPrecoPrazo
 
                     $item->setErroCodigo($servico->Erro);
                     if ($item->getErroCodigo() && ($item->getErroCodigo() != 10 || !$item->getValor())) {
-                        // Se entrar aqui significa que tem Erro e que esse Erro Ã© diferente de 10 ou o Erro Ã© 10 mas nÃ£o
-                        // nÃ£o foi retornando o Valor.
-                        // O erro "10" Ã© mais um aviso do que um erro. Se for erro 10 e tiver valor, nÃ£o considera um erro.
+                        // Se entrar aqui significa que tem Erro e que esse Erro é diferente de 10 ou o Erro é 10 mas não
+                        // não foi retornando o Valor.
+                        // O erro "10" é mais um aviso do que um erro. Se for erro 10 e tiver valor, não considera um erro.
                         $msgErro = $servico->MsgErro;
                         $msgErro = SoapClientFactory::convertEncoding($msgErro);
                         $item->setErroMsg($msgErro);
@@ -177,15 +177,15 @@ class CalcPrecoPrazo
                 }
             } else {
                 $result->setErrorCode(0);
-                $result->setErrorMsg('A resposta do Correios nÃ£o estÃ¡ no formato esperado. Detalhes do problema: "Faltando a entrada \'cServico\'."');
+                $result->setErrorMsg('A resposta do Correios não está no formato esperado. Detalhes do problema: "Faltando a entrada \'cServico\'."');
             }
         } else {
             $result->setErrorCode(0);
             if (isset($r)) {
                 if (is_object($r)) {
-                    $result->setErrorMsg('A resposta do Correios nÃ£o estÃ¡ no formato esperado. Detalhes do problema: "A resposta recebida Ã© um objeto, mas este objeto nÃ£o possui todos as entradas necessÃ¡rias."');
+                    $result->setErrorMsg('A resposta do Correios não está no formato esperado. Detalhes do problema: "A resposta recebida é um objeto, mas este objeto não possui todos as entradas necessárias."');
                 } else {
-                    $result->setErrorMsg('A resposta do Correios nÃ£o estÃ¡ no formato esperado. Resposta recebida: "' .
+                    $result->setErrorMsg('A resposta do Correios não está no formato esperado. Resposta recebida: "' .
                         $r . '"');
                 }
             } else {

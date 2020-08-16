@@ -31,7 +31,7 @@ class CadastrarPI
             
             if (!Bootstrap::getConfig()->getAccessData()|| !Bootstrap::getConfig()->getAccessData()->getIdCorreiosUsuario() || !Bootstrap::getConfig()->getAccessData()->getIdCorreiosSenha()
             ) {
-                throw new Exception('Para usar este serviÃ§o vocÃª precisa setar o nome de usuÃ¡rio e senha.');
+                throw new Exception('Para usar este serviço você precisa setar o nome de usuário e senha.');
             }
             
             $soapArgs = [

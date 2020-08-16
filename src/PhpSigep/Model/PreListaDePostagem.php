@@ -15,17 +15,17 @@ class PreListaDePostagem extends AbstractModel
 //	protected $id_plp;
     /**
      * Opcional.
-     * Quando n√£o informado ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     * Quando n„o informado ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      * @var AccessData
      */
     protected $accessData;
     /**
-     * Dados da pessoa que est√° remetendo esta encomenda.
+     * Dados da pessoa que est· remetendo esta encomenda.
      * @var Remetente
      */
     protected $remetente;
     /**
-     * Os objetos que est√£o sendo postados.
+     * Os objetos que est„o sendo postados.
      * @var ObjetoPostal[]
      */
     protected $encomendas;
@@ -33,7 +33,7 @@ class PreListaDePostagem extends AbstractModel
     /**
      * @param \PhpSigep\Model\AccessData $accessData
      *      Opcional.
-     *      Quando null ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     *      Quando null ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      */
     public function setAccessData($accessData)
     {

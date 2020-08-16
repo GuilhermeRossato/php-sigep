@@ -23,7 +23,7 @@ class VerificaDisponibilidadeServico extends AbstractModel
     protected $cepDestino;
     /**
      * Opcional.
-     * Quando n√£o informado ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     * Quando n„o informado ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      * @var AccessData
      */
     protected $accessData;
@@ -39,7 +39,7 @@ class VerificaDisponibilidadeServico extends AbstractModel
     /**
      * @param \PhpSigep\Model\AccessData $accessData
      *      Opcional.
-     *      Quando null ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     *      Quando null ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      */
     public function setAccessData(AccessData $accessData)
     {
@@ -102,7 +102,7 @@ class VerificaDisponibilidadeServico extends AbstractModel
             $servicos = array($servicos);
         }
         if ($piece && !($piece instanceof ServicoDePostagem)) {
-            throw new InvalidArgument('Este par√¢metro precisa ser uma inst√¢ncia de ' .
+            throw new InvalidArgument('Este par‚metro precisa ser uma inst‚ncia de ' .
                 '"PhpSigep\Model\ServicoDePostagem" ou um array de "PhpSigep\Model\ServicoDePostagem"');
         }
         

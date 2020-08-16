@@ -39,7 +39,7 @@ class Sedex extends AbstractChancela
         $servicos = $rClass->getConstants();
 
         if (in_array($servicoPostagem, $servicos) === false) {
-            throw new \InvalidArgumentException('O serviÃ§o de postagem deve ser uma das constantes da classe');
+            throw new \InvalidArgumentException('O serviço de postagem deve ser uma das constantes da classe');
         }
         $this->tipoServico = $servicoPostagem;
     }
@@ -140,7 +140,7 @@ class Sedex extends AbstractChancela
         $y2 = $y1 + .765 / $k;
         $pdf->Line($x1, $y1, $x2, $y2);
 
-        // NÃºmero contrato e DR
+        // Número contrato e DR
         $pdf->SetFont('', '', 6);
         $texto = $this->accessData->getNumeroContrato() . '/' . $this->accessData->getAnoContrato() . '-DR/' . $this->accessData->getDiretoria()->getSigla();
         $pdf->Cell($wRect, 6 / $k, $texto, 0, 2, 'C');

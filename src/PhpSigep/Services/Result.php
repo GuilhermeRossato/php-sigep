@@ -144,8 +144,8 @@ class Result extends DefaultStdClass
             }
             
             if ($piece !== null && !($piece instanceof AbstractModel) && !($piece instanceof \SoapFault)) {
-                throw new InvalidArgument('O resultado deve ser uma instÃ¢ncia de PhpSigep\Model\AbstractModel ou um ' .
-                    'array de PhpSigep\Model\AbstractModel ou uma instÃ¢ncia de \SoapFault.');
+                throw new InvalidArgument('O resultado deve ser uma instância de PhpSigep\Model\AbstractModel ou um ' .
+                    'array de PhpSigep\Model\AbstractModel ou uma instância de \SoapFault.');
             }
             
             $this->result = $result;

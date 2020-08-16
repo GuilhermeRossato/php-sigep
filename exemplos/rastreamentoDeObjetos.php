@@ -16,7 +16,7 @@ if ($etiquetasFromQueryRaw) {
 
 if (count($etiquetas)) {
     $accessDataDeHomologacao = new \PhpSigep\Model\AccessDataHomologacao();
-    $accessDataDeHomologacao->setUsuario('ECT');// UsuÃ¡rio e senha para teste passado no manual
+    $accessDataDeHomologacao->setUsuario('ECT');// Usuário e senha para teste passado no manual
     $accessDataDeHomologacao->setSenha('SRO');
     
     $params = new \PhpSigep\Model\RastrearObjeto();
@@ -39,7 +39,7 @@ if (count($etiquetas)) {
     <body>
         <form action="" method="get">
             <br/>
-            <label for="etiquetas">Etiquetas - separadas por vÃ­rgula</label>
+            <label for="etiquetas">Etiquetas - separadas por vírgula</label>
             <br/>
             <textarea name="etiquetas" id="etiquetas" cols="60" rows="3"><?php echo htmlspecialchars($etiquetasFromQueryRaw); ?></textarea>
             <br/>
@@ -52,7 +52,7 @@ if (count($etiquetas)) {
             if (count($etiquetas)) {
                 echo $dumpResult;
             } else {
-                echo 'Informe o cÃ³digo de rastreamento e clique no botÃ£o "Rastrear"';
+                echo 'Informe o código de rastreamento e clique no botão "Rastrear"';
             }
         ?>
     </body>

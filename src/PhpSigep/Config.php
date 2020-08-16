@@ -21,15 +21,15 @@ class Config extends DefaultStdClass
     const ENV_PRODUCTION = 1;
     
     /**
-     * Permite gerenciar o tempo de timeout das conex√µes (em caso de problemas de timeout verifique seu ambiente, acima de 30 deve funcionar somente em linha de comando)
+     * Permite gerenciar o tempo de timeout das conexıes (em caso de problemas de timeout verifique seu ambiente, acima de 30 deve funcionar somente em linha de comando)
      */
     const CONNECTION_TIMEOUT = 30;
     
     /**
-     * Defina o m√©todo para cache no WSDL do PHP (melhor WSDL_CACHE_BOTH)
-     * WSDL_CACHE_MEMORY = mem√≥ria
+     * Defina o mÈtodo para cache no WSDL do PHP (melhor WSDL_CACHE_BOTH)
+     * WSDL_CACHE_MEMORY = memÛria
      * WSDL_CACHE_DISK = disco
-     * WSDL_CACHE_BOTH = mem√≥ria e disco
+     * WSDL_CACHE_BOTH = memÛria e disco
      * WSDL_CACHE_NONE = nenhum
      */
     const WSDL_CACHE = WSDL_CACHE_BOTH;
@@ -54,8 +54,8 @@ class Config extends DefaultStdClass
 //    const WSDL_REVERSA_DEVELOPMENT = 'http://webservicescolhomologacao.correios.com.br/ScolWeb/WebServiceScol?wsdl';
 
     /**
-     * Endere√ßo para o WSDL AtendeCliente.
-     * Esse WSDL possui duas vers√µes, uma para o ambiente de produ√ß√£o e outra para o ambiente de desenvolvimento.
+     * EndereÁo para o WSDL AtendeCliente.
+     * Esse WSDL possui duas versıes, uma para o ambiente de produÁ„o e outra para o ambiente de desenvolvimento.
      * @var string
      */
     protected $wsdlAtendeCliente = self::WSDL_ATENDE_CLIENTE_DEVELOPMENT;
@@ -106,7 +106,7 @@ class Config extends DefaultStdClass
     protected $cacheOptions = null;
 
     /**
-     * F√°brica que ir√° criar e retornar uma inst√¢ncia de {@link \PhpSigep\Cache\StorageInterface }
+     * F·brica que ir· criar e retornar uma inst‚ncia de {@link \PhpSigep\Cache\StorageInterface }
      * @var string|FactoryInterface
      */
     protected $cacheFactory = 'PhpSigep\Cache\Factory';
@@ -117,9 +117,9 @@ class Config extends DefaultStdClass
     protected $cacheInstance;
 
     /**
-     * Muitos dos m√©todos do php-sigep recebem como par√¢metro uma inst√¢ncia de {@link AccessData}, mas voc√™ n√£o precisa
-     * passar essa informa√ß√£o todas as vezes que for pedido.
-     * O valor setado neste atributo ser√° usado sempre que um m√©todo precisar dos dados de acesso mas voc√™ n√£o tiver
+     * Muitos dos mÈtodos do php-sigep recebem como par‚metro uma inst‚ncia de {@link AccessData}, mas vocÍ n„o precisa
+     * passar essa informaÁ„o todas as vezes que for pedido.
+     * O valor setado neste atributo ser· usado sempre que um mÈtodo precisar dos dados de acesso mas vocÍ n„o tiver
      * informado um.
      *
      * @var AccessData
@@ -127,7 +127,7 @@ class Config extends DefaultStdClass
     protected $accessData;
 
     /**
-     * Configura√ß√µes de proxy para o SoapClient.
+     * ConfiguraÁıes de proxy para o SoapClient.
      *
      * @var proxy
      */
@@ -146,7 +146,7 @@ class Config extends DefaultStdClass
     }
 
     /**
-     * N√£o defina env como true em ambiente de produ√ß√£o.
+     * N„o defina env como true em ambiente de produÁ„o.
      * @return bool
      */
     public function getEnv()
@@ -420,8 +420,8 @@ class Config extends DefaultStdClass
     }
 
     /**
-     * Este n√£o √© o melhor lugar para este m√©todo, mas dada a simplicidade do projeto ele pode ficar aqui por enquanto.
-     * @todo Criar um Service Manager para abstrair a cria√ß√£o dos objetos.
+     * Este n„o È o melhor lugar para este mÈtodo, mas dada a simplicidade do projeto ele pode ficar aqui por enquanto.
+     * @todo Criar um Service Manager para abstrair a criaÁ„o dos objetos.
      */
     public function getCacheInstance()
     {

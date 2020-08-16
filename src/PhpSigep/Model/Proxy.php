@@ -4,7 +4,7 @@ namespace PhpSigep\Model;
 use PhpSigep\InvalidArgument;
 
 /**
- * @author: RÃ´mulo Neves (https://github.com/romuloneves)
+ * @author: Rômulo Neves (https://github.com/romuloneves)
  */
 class Proxy extends AbstractModel
 {

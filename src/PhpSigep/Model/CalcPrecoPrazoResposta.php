@@ -8,64 +8,64 @@ class CalcPrecoPrazoResposta extends AbstractModel
 {
 
     /**
-     * C√≥digo do servi√ßo de entrega.
+     * CÛdigo do serviÁo de entrega.
      * @var ServicoDePostagem
      */
     protected $servico;
 
     /**
-     * Pre√ßo total da encomenda, em Reais, incluindo os pre√ßos dos servi√ßos opcionais.
+     * PreÁo total da encomenda, em Reais, incluindo os preÁos dos serviÁos opcionais.
      * @var float
      */
     protected $valor;
 
     /**
      * Prazo estimado em dias para entrega do produto.
-     * Se o valor retornado for 0 (zero), indica que o web service do Correios n√£o retornou o prazo para esta entrega.
+     * Se o valor retornado for 0 (zero), indica que o web service do Correios n„o retornou o prazo para esta entrega.
      * @var int
      */
     protected $prazoEntrega;
 
     /**
-     * Pre√ßo do servi√ßo adicional M√£o Pr√≥pria.
+     * PreÁo do serviÁo adicional M„o PrÛpria.
      * @var float
      */
     protected $valorMaoPropria;
 
     /**
-     * Pre√ßo do servi√ßo adicional Aviso de Recebimento.
+     * PreÁo do serviÁo adicional Aviso de Recebimento.
      * @var float
      */
     protected $valorAvisoRecebimento;
 
     /**
-     * Pre√ßo do servi√ßo adicional Valor Declarado.
+     * PreÁo do serviÁo adicional Valor Declarado.
      * @var float
      */
     protected $valorValorDeclarado;
 
     /**
-     * Informa se a localidade informada possui entrega domicili√°ria.
-     * Se o prazo n√£o for retornado corretamente, o retorno deste par√¢metro ser√° vazio.
+     * Informa se a localidade informada possui entrega domicili·ria.
+     * Se o prazo n„o for retornado corretamente, o retorno deste par‚metro ser· vazio.
      * @var  bool
      */
     protected $entregaDomiciliar;
 
     /**
-     * Informa se a localidade informada possui entrega domicili√°ria aos s√°bados.
-     * Se o prazo n√£o for retornado corretamente, o retorno deste par√¢metro ser√° vazio.
+     * Informa se a localidade informada possui entrega domicili·ria aos s·bados.
+     * Se o prazo n„o for retornado corretamente, o retorno deste par‚metro ser· vazio.
      * @var bool
      */
     protected $entregaSabado;
 
     /**
-     * C√≥digo do erro retornado pelo web service do Correios.
+     * CÛdigo do erro retornado pelo web service do Correios.
      * @var int
      */
     protected $erroCodigo;
 
     /**
-     * Retorna a descri√ß√£o do erro gerado.
+     * Retorna a descriÁ„o do erro gerado.
      * @var string
      */
     protected $erroMsg;

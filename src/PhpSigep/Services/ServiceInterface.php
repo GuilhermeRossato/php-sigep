@@ -29,10 +29,10 @@ interface ServiceInterface
     public function solicitaEtiquetas(\PhpSigep\Model\SolicitaEtiquetas $params);
 
     /**
-     * Pede para o WebService do Correios calcular o dÃ­gito verificador de uma etiqueta.
+     * Pede para o WebService do Correios calcular o dígito verificador de uma etiqueta.
      *
-     * Se preferir vocÃª pode usar o mÃ©todo {@linnk \PhpSigep\Model\Etiqueta::getDv() } para calcular o dÃ­gito
-     * verificador, visto que esse mÃ©todo Ã© mais rÃ¡dido pois faz o cÃ¡lculo local sem precisar se comunicar com o
+     * Se preferir você pode usar o método {@linnk \PhpSigep\Model\Etiqueta::getDv() } para calcular o dígito
+     * verificador, visto que esse método é mais rádido pois faz o cálculo local sem precisar se comunicar com o
      * WebService.
      *
      * @param \PhpSigep\Model\GeraDigitoVerificadorEtiquetas $params

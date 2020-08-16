@@ -42,7 +42,7 @@ class AvisoRecebimento{
             $pdf->SetY($hInner / 2 - $lineHeigth / 2);
             $this->pdf->MultiCellXp(
                 $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                "SimulaÃ§Ã£o Documento sem valor",
+                "Simulação Documento sem valor",
                 null,
                 0,
                 'C'
@@ -166,10 +166,10 @@ class AvisoRecebimento{
         $destinatario = $objetoPostal->getDestinatario();
         $destino = $objetoPostal->getDestino();
         
-        //destinatÃ¡rio
+        //destinatário
         $this->pdf->SetXY($x, $y+2);
         $this->pdf->SetFont('', 'B', 8);
-        $this->pdf->CellXp($wContentInner, 'DESTINATÃRIO', 'L', 2, null, 0);
+        $this->pdf->CellXp($wContentInner, 'DESTINATÁRIO', 'L', 2, null, 0);
         $this->pdf->SetFont('', '', 7);
         //TODO pode quebrar linha usar MultiCellXp
         $this->pdf->CellXp($wContentInner, $destinatario->getNome(), 'L', 2, null, 0);
@@ -202,7 +202,7 @@ class AvisoRecebimento{
         $this->pdf->SetX($x);
         $this->pdf->SetFont('', 'B', 8);
         $this->ln(1);
-        $this->pdf->CellXp($wContentInner, 'ENDEREÃ‡O PARA DEVOLUÃ‡ÃƒO DO OBJETO:', 'L', 2, null, 0);
+        $this->pdf->CellXp($wContentInner, 'ENDEREÇO PARA DEVOLUÇÃO DO OBJETO:', 'L', 2, null, 0);
         $this->ln(1);
         $this->pdf->SetFont('', '', 7);
         $this->pdf->CellXp($wContentInner, $remetente->getLogradouro().(($remetente->getNumero())?', '.$remetente->getNumero():''), 'L', 2, null, 0);
@@ -220,7 +220,7 @@ class AvisoRecebimento{
 
         $this->pdf->SetXY($x, $yHeaderRect);
         $this->pdf->SetFont('', '', 5);
-        $this->pdf->CellXp($wContentInner, 'DECLARAÃ‡ÃƒO DE CONTEÃšDO', 'L', 2, null, 0);
+        $this->pdf->CellXp($wContentInner, 'DECLARAÇÃO DE CONTEÚDO', 'L', 2, null, 0);
         $this->ln(5);
         
         $this->pdf->Rect($x, $yHeaderRect, $wContentInner, $this->pdf->y - $yHeaderRect, 'S');
@@ -242,25 +242,25 @@ class AvisoRecebimento{
         $this->ln(5);
         
         $this->pdf->SetFont('', 'B', 8);
-        $this->pdf->CellXp($wContentInner, '1Âº ____/____/____       ____:____h', 'L', 2, null, 0);
+        $this->pdf->CellXp($wContentInner, '1º ____/____/____       ____:____h', 'L', 2, null, 0);
         $this->ln(2);
-        $this->pdf->CellXp($wContentInner, '2Âº ____/____/____       ____:____h', 'L', 2, null, 0);
+        $this->pdf->CellXp($wContentInner, '2º ____/____/____       ____:____h', 'L', 2, null, 0);
         $this->ln(2);
-        $this->pdf->CellXp($wContentInner, '3Âº ____/____/____       ____:____h', 'L', 2, null, 0);
+        $this->pdf->CellXp($wContentInner, '3º ____/____/____       ____:____h', 'L', 2, null, 0);
         $this->ln(15);
         
         $this->pdf->SetFont('', '', 8);
-        $this->pdf->CellXp($x, 'MOTIVO DE DEVOLUÃ‡ÃƒO:', 'L', 2, null, 0);
+        $this->pdf->CellXp($x, 'MOTIVO DE DEVOLUÇÃO:', 'L', 2, null, 0);
         
         $wItem = ($wInner*12)/100;
         
         $this->writeItemDevolution('1', 'Mudou-se', $x, $wItem, 0);
         $this->writeItemDevolution('5', 'Recusado', $x, $wItem, 2);
         
-        $this->writeItemDevolution('2', 'EndereÃ§o Insuficiente', $x, $wItem, 0);
-        $this->writeItemDevolution('6', 'NÃ£o Procurado', $x, $wItem, 2);
+        $this->writeItemDevolution('2', 'Endereço Insuficiente', $x, $wItem, 0);
+        $this->writeItemDevolution('6', 'Não Procurado', $x, $wItem, 2);
         
-        $this->writeItemDevolution('3', 'NÃ£o Existe o NÃºmero', $x, $wItem, 0);
+        $this->writeItemDevolution('3', 'Não Existe o Número', $x, $wItem, 0);
         $this->writeItemDevolution('7', 'Ausente', $x, $wItem, 2);
         
         $this->writeItemDevolution('4', 'Desconhecido', $x, $wItem, 0);
@@ -295,10 +295,10 @@ class AvisoRecebimento{
         //Linha 2
         $yLine2 = $y + $hRect;
         $this->pdf->SetXY($x, $yLine2);
-        $this->pdf->CellXp($col1, 'NOME LEGÃVEL DO RECEBEDOR', 'L', 0, null, 0);
+        $this->pdf->CellXp($col1, 'NOME LEGÍVEL DO RECEBEDOR', 'L', 0, null, 0);
         $this->pdf->Rect($x, $yLine2, $col1, $hRect, 'S');
         
-        $this->pdf->CellXp($col2, 'NÂº DOC. DE IDENTIDADE', 'L', 2, null, 0);
+        $this->pdf->CellXp($col2, 'Nº DOC. DE IDENTIDADE', 'L', 2, null, 0);
         $this->pdf->Rect($x+$col1, $yLine2, $col2, $hRect, 'S');
         
         //final do quadro
@@ -329,7 +329,7 @@ class AvisoRecebimento{
         $yLast = $y+$hStamp;
         $this->pdf->SetXY($x, $yLast);
         $this->ln(1);
-        $this->pdf->CellXp($wContentInner, 'RUBRICA E MATRÃCULA DO CARTEIRO', 'C', 2, null, 0);
+        $this->pdf->CellXp($wContentInner, 'RUBRICA E MATRÍCULA DO CARTEIRO', 'C', 2, null, 0);
         $this->pdf->Rect($x, $yLast, $wContentInner, $yEnd-$yLast, 'S');
     }
     

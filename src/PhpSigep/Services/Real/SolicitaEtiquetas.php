@@ -23,12 +23,12 @@ class SolicitaEtiquetas implements RealServiceInterface
             if ($request instanceof \SoapFault) {
                 throw $request;
             }
-            throw new \Exception('NÃ£o foi possÃ­vel obter as etiquetas solicitadas. Retorno: "' . $request . '"');
+            throw new \Exception('Não foi possível obter as etiquetas solicitadas. Retorno: "' . $request . '"');
         }
     }
     
     /**
-     * Busca numero da etiqueta em uma unica requisiÃ§Ã£o assim garantindo que os numeros das etiquetas nÃ£o tenham intervalos
+     * Busca numero da etiqueta em uma unica requisição assim garantindo que os numeros das etiquetas não tenham intervalos
      * @param array $soapArgs
      * @param AbstractModel $params
      * @return Etiqueta[]
@@ -61,7 +61,7 @@ class SolicitaEtiquetas implements RealServiceInterface
     }
     
     /**
-     * Busca numero da etiqueta em uma unica requisiÃ§Ã£o assim garantindo que os numeros das etiquetas nÃ£o tenham intervalos
+     * Busca numero da etiqueta em uma unica requisição assim garantindo que os numeros das etiquetas não tenham intervalos
      * @param array $soapArgs
      * @param AbstractModel $params
      * @return Etiqueta[]
@@ -115,7 +115,7 @@ class SolicitaEtiquetas implements RealServiceInterface
             if (!$params->getAccessData() || !$params->getAccessData()->getUsuario()
                 || !$params->getAccessData()->getSenha()
             ) {
-                throw new Exception('Para usar este serviÃ§o vocÃª precisa setar o nome de usuÃ¡rio e senha.');
+                throw new Exception('Para usar este serviço você precisa setar o nome de usuário e senha.');
             }
 
             if($params->isModoMultiplasRequisicoes()){

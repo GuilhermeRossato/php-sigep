@@ -21,21 +21,21 @@ $dimensao->setTipo(\PhpSigep\Model\Dimensao::TIPO_PACOTE_CAIXA);
 
 // *** DADOS DO REMETENTE *** //
 $remetente = new \PhpSigep\Model\Remetente();
-$remetente->setNome('Google SÃ£o Paulo');
+$remetente->setNome('Google São Paulo');
 $remetente->setLogradouro('Av. Brigadeiro Faria Lima');
 $remetente->setNumero('3900');
-$remetente->setComplemento('5Âº andar');
+$remetente->setComplemento('5º andar');
 $remetente->setBairro('Itaim');
 $remetente->setCep('04538-132');
 $remetente->setUf('SP');
-$remetente->setCidade('SÃ£o Paulo');
+$remetente->setCidade('São Paulo');
 // *** FIM DOS DADOS DO REMETENTE *** //
 
 $destinatario = new \PhpSigep\Model\Destinatario();
 $destinatario->setNome('Google Belo Horizonte');
 $destinatario->setLogradouro('Av. Bias Fortes');
 $destinatario->setNumero('382');
-$destinatario->setComplemento('6Âº andar');
+$destinatario->setComplemento('6º andar');
 $destinatario->setIsCliqueRetire(true);
 
 $destino = new \PhpSigep\Model\DestinoNacional();
@@ -47,7 +47,7 @@ $destino->setUf('MG');
 
 $servicoAdicional = new \PhpSigep\Model\ServicoAdicional();
 $servicoAdicional->setCodigoServicoAdicional(\PhpSigep\Model\ServicoAdicional::SERVICE_REGISTRO);
-// Se nÃ£o tiver valor declarado informar 0 (zero)
+// Se não tiver valor declarado informar 0 (zero)
 $servicoAdicional->setValorDeclarado(250);
 
 $etiqueta = new \PhpSigep\Model\Etiqueta();

@@ -57,7 +57,7 @@ class Real implements ServiceInterface
     }
 
     /**
-     * @param integer $idPlpMaster n√∫mero da PLP
+     * @param integer $idPlpMaster n˙mero da PLP
      *
      * @return Result<\PhpSigep\Model\solicitaXmlPlp[]>
      */
@@ -114,10 +114,10 @@ class Real implements ServiceInterface
     }
 
     /**
-     * Pede para o WebService do Correios calcular o d√≠gito verificador de uma etiqueta.
+     * Pede para o WebService do Correios calcular o dÌgito verificador de uma etiqueta.
      *
-     * Se preferir voc√™ pode usar o m√©todo {@linnk \PhpSigep\Model\Etiqueta::getDv() } para calcular o d√≠gito
-     * verificador, visto que esse m√©todo √© mais r√°pido pois faz o c√°lculo local sem precisar se comunicar com o
+     * Se preferir vocÍ pode usar o mÈtodo {@linnk \PhpSigep\Model\Etiqueta::getDv() } para calcular o dÌgito
+     * verificador, visto que esse mÈtodo È mais r·pido pois faz o c·lculo local sem precisar se comunicar com o
      * WebService.
      *
      * @param \PhpSigep\Model\GeraDigitoVerificadorEtiquetas $params
@@ -187,7 +187,7 @@ class Real implements ServiceInterface
     }
 
     /**
-     * Pede para o WebService do Correios suspender a entrega de uma encomenda ao destinat√°rio
+     * Pede para o WebService do Correios suspender a entrega de uma encomenda ao destinat·rio
      * @param $numeroEtiqueta
      * @param $idPlp
      * @param $usuario
@@ -201,7 +201,7 @@ class Real implements ServiceInterface
     }
 
     /**
-     * Pede para o WebService do Correios cancelar a entrega de uma encomenda ao destinat√°rio
+     * Pede para o WebService do Correios cancelar a entrega de uma encomenda ao destinat·rio
      * @param $numeroEtiqueta
      * @param $idPlp
      * @param $usuario

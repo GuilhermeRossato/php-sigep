@@ -77,7 +77,7 @@ class ListaDePostagem
      */
     private function writeHeader($pdf, $k, $wInner)
     {
-// Cria o cabeÃ§alho
+// Cria o cabeçalho
         $yHeaderRect = $pdf->y + 10 / $k;
         $pdf->SetY($yHeaderRect);
         $pdf->SetFont('', 'B', 13);
@@ -92,7 +92,7 @@ class ListaDePostagem
         $remeAddress = $remetente->getLogradouro();
         $numero      = $remetente->getNumero();
         if (!$numero || strtolower($numero) == 'sn') {
-            $remeAddress .= ', s/ nÂº';
+            $remeAddress .= ', s/ nº';
         } else {
             $remeAddress .= ', #' . $numero;
         }
@@ -103,17 +103,17 @@ class ListaDePostagem
         $remeAddress .= ' - Cidade: ' . $remetente->getCidade() . '/' . $remetente->getUf();
 
         $pdf->setLineHeightPadding(50 / $k);
-        $this->labeledText($pdf, 'NÂº da lista:', $this->idPlpCorreios, $wHeaderCols);
+        $this->labeledText($pdf, 'Nº da lista:', $this->idPlpCorreios, $wHeaderCols);
         $this->labeledText($pdf, 'Cliente:', $remetente->getNome(), $wHeaderCols, 1);
         $this->labeledText($pdf, 'Contrato:', $plp->getAccessData()->getNumeroContrato(), $wHeaderCols);
         $this->labeledText($pdf, 'Cod. adm.:', $plp->getAccessData()->getCodAdministrativo(), $wHeaderCols);
-        $this->labeledText($pdf, 'CartÃ£o:', $plp->getAccessData()->getCartaoPostagem(), $wHeaderCols, 1);
+        $this->labeledText($pdf, 'Cartão:', $plp->getAccessData()->getCartaoPostagem(), $wHeaderCols, 1);
         $this->labeledText($pdf, 'Remetente:', $remetente->getNome(), $wHeaderCols, 1);
         $this->labeledText($pdf, 'Telefone:', $remetente->getTelefone(), $wHeaderCols, 1);
         $yAboveFone = $pdf->y;
         $pdf->y -= ($pdf->getLineHeigth() * 2);
         $pdf->x += $wHeaderCols;
-        $this->labeledText($pdf, 'EndereÃ§o:', $remeAddress, $wHeaderCols * 2, 1, 16 / $k);
+        $this->labeledText($pdf, 'Endereço:', $remeAddress, $wHeaderCols * 2, 1, 16 / $k);
         $yAboveAddress = $pdf->y;
 
         $yRec = ($yAboveFone > $yAboveAddress ? $yAboveFone : $yAboveAddress);
@@ -130,7 +130,7 @@ class ListaDePostagem
         $lineHeigth = $pdf->getLineHeigth();
         $y2         = $pdf->y + $lineHeigth;
 
-        // CabeÃ§alho da lista
+        // Cabeçalho da lista
         $space  = $pdf->GetStringWidth(' ');
         $xCol1  = $pdf->lMargin;
         $wCol1  = $space * 15;
@@ -294,7 +294,7 @@ class ListaDePostagem
     {
         $pdf->SetFont('Courier', 'B', 8);
         $pdf->SetXY($xCol1, $y2);
-        $pdf->CellXp($wCol1, 'NÂº do objeto');
+        $pdf->CellXp($wCol1, 'Nº do objeto');
         $pdf->SetX($xCol2);
         $pdf->CellXp($wCol2, 'CEP', 'C');
         $pdf->SetX($xCol3);
@@ -312,7 +312,7 @@ class ListaDePostagem
         $pdf->SetXY($xCol9, $y2);
         $pdf->CellXp($wCol9, 'Volume', 'C');
         $pdf->SetX($xCol10);
-        $pdf->CellXp($wCol10, 'DestinatÃ¡rio', 'C');
+        $pdf->CellXp($wCol10, 'Destinatário', 'C');
     }
 
     /**
@@ -455,11 +455,11 @@ class ListaDePostagem
         $lPosLogo     = $pdf->x;
         $pdf->Image($logoCorreios, $lPosLogo, null, $wLogo);
 
-        // Escreve o titulo do relatÃ³rio
+        // Escreve o titulo do relatório
         $lPosTitle = $lPosLogo + $wLogo;
         $pdf->SetXY($lPosTitle, $pdf->tMargin);
         $pdf->SetFont('', 'B', 15);
-        $pdf->CellXp($wInner - $wLogo, 'EMPRESA BRASILEIRA DE CORREIOS E TELÃ‰GRAFOS', 'C', 1, 23 / $k);
+        $pdf->CellXp($wInner - $wLogo, 'EMPRESA BRASILEIRA DE CORREIOS E TELÉGRAFOS', 'C', 1, 23 / $k);
     }
 
     private function writeBottom()
@@ -482,13 +482,13 @@ class ListaDePostagem
 
         $pdf->SetFont('', 'B');
         $pdf->y += ($lineHeigth / 2);
-        $pdf->CellXp($wInner, 'APRESENTAR ESTA LISTA EM CASO DE PEDIDO DE INFORMAÃ‡Ã•ES', 'C', 1);
+        $pdf->CellXp($wInner, 'APRESENTAR ESTA LISTA EM CASO DE PEDIDO DE INFORMAÇÕES', 'C', 1);
         $pdf->SetFont('', '');
         $pdf->Ln();
-        $str     = 'Estou ciente do disposto na clÃ¡sula terceria do contrato de prestaÃ§Ã£o de serviÃ§os';
+        $str     = 'Estou ciente do disposto na clásula terceria do contrato de prestação de serviços';
         $stringW = $pdf->GetStringWidthXd($str);
         $pdf->CellXp($stringW, $str);
-        $pdf->CellXp($wInner - $stringW, 'Carimbo e assinatura / MatrÃ­cula dos Correios', 'R', 1);
+        $pdf->CellXp($wInner - $stringW, 'Carimbo e assinatura / Matrícula dos Correios', 'R', 1);
 
         $pdf->y += ($lineHeigth * 4);
         $lineW  = 250 / $k;
@@ -499,7 +499,7 @@ class ListaDePostagem
         $pdf->y += ($lineHeigth / 2);
         $pdf->CellXp($lineW, 'ASSINATURA DO REMETENTE', 'C', 2);
         $pdf->y += ($lineHeigth * 2);
-        $pdf->CellXp($lineW, 'Obs: 1Âº via p/ a Unidade de Postagem e 2Âº via p/ o cliente', 'C');
+        $pdf->CellXp($lineW, 'Obs: 1º via p/ a Unidade de Postagem e 2º via p/ o cliente', 'C');
     }
 
     private function writeFooter()
@@ -509,7 +509,7 @@ class ListaDePostagem
 
         $pdf->AutoPageBreak = false;
         $wInner             = $pdf->w - $pdf->lMargin - $pdf->rMargin;
-        $dataEmissao        = "Emitido em " . date('d/m/Y \Ã \s H:i:s');
+        $dataEmissao        = "Emitido em " . date('d/m/Y \à\s H:i:s');
 
         foreach ($pdf->pages as $pNumber => $page) {
             $pdf->page = $pNumber;
@@ -522,7 +522,7 @@ class ListaDePostagem
             $pdf->CellXp($wInner, $dataEmissao);
 
             $pdf->x = $pdf->lMargin;
-            $str    = "PÃ¡gina " . $pNumber . " de " . count($pdf->pages);
+            $str    = "Página " . $pNumber . " de " . count($pdf->pages);
 
             $pdf->CellXp($wInner, $str, 'R');
         }
@@ -541,7 +541,7 @@ class ListaDePostagem
             $pdf->SetY($hInner / 2 - $lineHeigth / 2);
             $this->pdf->MultiCellXp(
                 $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                "SimulaÃ§Ã£o Documento sem valor",
+                "Simulação Documento sem valor",
                 null,
                 0,
                 'C'

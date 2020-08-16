@@ -37,7 +37,7 @@ abstract class AbstractChancela
     public function setLeftPos($x)
     {
         if (is_numeric($x) === false) {
-            throw new \InvalidArgumentException('ParÃ¢metro $x precisa ser do tipo numÃ©rico');
+            throw new \InvalidArgumentException('Parâmetro $x precisa ser do tipo numérico');
         }
         $this->x = $x;
     }
@@ -45,7 +45,7 @@ abstract class AbstractChancela
     public function setTopPos($y)
     {
         if (is_numeric($y) === false) {
-            throw new \InvalidArgumentException('ParÃ¢metro $x precisa ser do tipo numÃ©rico');
+            throw new \InvalidArgumentException('Parâmetro $x precisa ser do tipo numérico');
         }
         $this->y = $y;
     }
@@ -53,7 +53,7 @@ abstract class AbstractChancela
     public function setNomeRemetente($nomeRemetente)
     {
         if (is_string($nomeRemetente) === false) {
-            throw new \InvalidArgumentException('ParÃ¢metro $nomeRemetente precisa ser do tipo string');
+            throw new \InvalidArgumentException('Parâmetro $nomeRemetente precisa ser do tipo string');
         }
         $this->nomeRemetente = $nomeRemetente;
     }

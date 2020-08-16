@@ -8,8 +8,8 @@ class Destinatario extends AbstractModel
 {
 
     /**
-     * Nome do destinat√°rio.
-     * Obrigat√≥rio.
+     * Nome do destinat·rio.
+     * ObrigatÛrio.
      * Max length: 50
      * Tag: nome_destinatario
      * @var string
@@ -17,8 +17,8 @@ class Destinatario extends AbstractModel
     protected $nome;
 
     /**
-     * Telefone do Destinat√°rio.
-     * N√£o Obrigat√≥rio.
+     * Telefone do Destinat·rio.
+     * N„o ObrigatÛrio.
      * Max length: 12
      * Tag: telefone_destinatario
      * @var string
@@ -26,8 +26,8 @@ class Destinatario extends AbstractModel
     protected $telefone;
 
     /**
-     * Celular do Destinat√°rio.
-     * N√£o Obrigat√≥rio.
+     * Celular do Destinat·rio.
+     * N„o ObrigatÛrio.
      * Max length: 12
      * Tag: celular_destinatario
      * @var string
@@ -35,8 +35,8 @@ class Destinatario extends AbstractModel
     protected $celular;
 
     /**
-     * Email do Destinat√°rio.
-     * N√£o obrigat√≥rio
+     * Email do Destinat·rio.
+     * N„o obrigatÛrio
      * Max length: 50
      * Tag: email_destinatario
      * @var string
@@ -44,8 +44,8 @@ class Destinatario extends AbstractModel
     protected $email;
 
     /**
-     * Logradouro do destinat√°rio.
-     * Obrigat√≥rio.
+     * Logradouro do destinat·rio.
+     * ObrigatÛrio.
      * Max length: 50
      * Tag: logradouro_destinatario
      * @var string
@@ -53,8 +53,8 @@ class Destinatario extends AbstractModel
     protected $logradouro;
 
     /**
-     * Complemento do endere√ßo.
-     * N√£o obrigat√≥rio.
+     * Complemento do endereÁo.
+     * N„o obrigatÛrio.
      * Max length: 30
      * Tag: complemento_destinatario
      * @var string
@@ -62,8 +62,8 @@ class Destinatario extends AbstractModel
     protected $complemento;
 
     /**
-     * N√∫mero da casa, pr√©dio, etc. Parte do endere√ßo.
-     * Obrigat√≥rio.
+     * N˙mero da casa, prÈdio, etc. Parte do endereÁo.
+     * ObrigatÛrio.
      * Max length: 6
      * Tag: numero_end_destinatario
      * @var string
@@ -71,8 +71,8 @@ class Destinatario extends AbstractModel
     protected $numero;
 
     /**
-     * Indica se o destinat√°rio √© clique e retire
-     * N√£o Obrigat√≥rio.
+     * Indica se o destinat·rio È clique e retire
+     * N„o ObrigatÛrio.
      * Tag: is_clique_retire
      * @var boolean
      */
@@ -80,7 +80,7 @@ class Destinatario extends AbstractModel
 
     /**
      * 
-     * Obrigat√≥rio.
+     * ObrigatÛrio.
      * Max length: 50
      * Tag: bairro
      * @var string
@@ -89,7 +89,7 @@ class Destinatario extends AbstractModel
 
     /**
      * 
-     * N√£o Obrigat√≥rio.
+     * N„o ObrigatÛrio.
      * Max length: 50
      * Tag: referencia
      * @var string
@@ -98,7 +98,7 @@ class Destinatario extends AbstractModel
 
     /**
      * 
-     * Obrigat√≥rio.
+     * ObrigatÛrio.
      * Max length: 12
      * Tag: cidade
      * @var string
@@ -107,7 +107,7 @@ class Destinatario extends AbstractModel
 
     /**
      * 
-     * Obrigat√≥rio.
+     * ObrigatÛrio.
      * Max length: 2
      * Tag: uf
      * @var string
@@ -116,7 +116,7 @@ class Destinatario extends AbstractModel
 
     /**
      * 
-     * Obrigat√≥rio.
+     * ObrigatÛrio.
      * Max length: 8
      * Tag: cep
      * @var int
@@ -125,7 +125,7 @@ class Destinatario extends AbstractModel
 
     /**
      * 
-     * N√£o Obrigat√≥rio.
+     * N„o ObrigatÛrio.
      * Max length: 3
      * Tag: ddd
      * @var int

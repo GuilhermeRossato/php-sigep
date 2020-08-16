@@ -3,8 +3,8 @@
 require '../vendor/autoload.php';
 
 $accessData = new \PhpSigep\Model\AccessDataHomologacao();
-$accessData->setIdCorreiosUsuario('USUÃ€RIO'); // NÃ£o consegui um de teste
-$accessData->setIdCorreiosSenha('SENHA'); // NÃ£o consegui um de teste
+$accessData->setIdCorreiosUsuario('USUÀRIO'); // Não consegui um de teste
+$accessData->setIdCorreiosSenha('SENHA'); // Não consegui um de teste
 
 $config = new \PhpSigep\Config();
 $config->setAccessData($accessData);
@@ -45,7 +45,7 @@ $dumpResult = print_r($result, true);
             <br />
             <input type="text" name="cep" placeholder="cep" value="<?php echo htmlspecialchars($cep, ENT_QUOTES); ?>"/>
             <br />
-            <button type="submit">Listar AgÃªncias clique e retire</button>
+            <button type="submit">Listar Agências clique e retire</button>
         </form>
         <br/>
         <hr/>

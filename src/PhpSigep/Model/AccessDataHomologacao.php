@@ -7,7 +7,7 @@ namespace PhpSigep\Model;
 class AccessDataHomologacao extends AccessData
 {
     /**
-     * Atalho para criar uma {@link AccessData} com os dados do ambiente de homologaÃ§Ã£o.
+     * Atalho para criar uma {@link AccessData} com os dados do ambiente de homologação.
      */
     public function __construct()
     {
@@ -18,9 +18,9 @@ class AccessDataHomologacao extends AccessData
                 'codAdministrativo' => '17000190',
                 'numeroContrato'    => '9992157880',
                 'cartaoPostagem'    => '0067599079',
-                'cnpjEmpresa'       => '34028316000103', // Obtido no mÃ©todo 'buscaCliente'.
-                'anoContrato'       => null, // NÃ£o consta no manual.
-                'diretoria'         => new Diretoria(Diretoria::DIRETORIA_DR_BRASILIA), // Obtido no mÃ©todo 'buscaCliente'.
+                'cnpjEmpresa'       => '34028316000103', // Obtido no método 'buscaCliente'.
+                'anoContrato'       => null, // Não consta no manual.
+                'diretoria'         => new Diretoria(Diretoria::DIRETORIA_DR_BRASILIA), // Obtido no método 'buscaCliente'.
             )
         );
         try {\PhpSigep\Bootstrap::getConfig()->setEnv(\PhpSigep\Config::ENV_DEVELOPMENT);} catch (\Exception $e) {}

@@ -18,15 +18,15 @@ class SolicitaEtiquetas extends AbstractModel
      */
     protected $qtdEtiquetas;
     /**
-     * Padr√£o true
-     * Quando true far√° para cada etiqueta solicitada uma requisi√ß√£o para os correios com base no valor de $qtdEtiquetas
-     * Quando false incorporar√° ao XML de solicita√ß√£o de etiqueta e portanto apenas uma requisi√ß√£o para os correios.
+     * Padr„o true
+     * Quando true far· para cada etiqueta solicitada uma requisiÁ„o para os correios com base no valor de $qtdEtiquetas
+     * Quando false incorporar· ao XML de solicitaÁ„o de etiqueta e portanto apenas uma requisiÁ„o para os correios.
      * @var boolean
      */
     protected $modoMultiplasRequisicoes = true;
     /**
      * Opcional.
-     * Quando n√£o informado ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     * Quando n„o informado ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      * @var AccessData
      */
     protected $accessData;
@@ -42,7 +42,7 @@ class SolicitaEtiquetas extends AbstractModel
     /**
      * @param AccessData $accessData
      *      Opcional.
-     *      Quando null ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     *      Quando null ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      */
     public function setAccessData(AccessData $accessData)
     {
@@ -106,7 +106,7 @@ class SolicitaEtiquetas extends AbstractModel
         }
         
         if (!($servicoDePostagem instanceof ServicoDePostagem)) {
-            throw new InvalidArgument('Servi√ßo de postagem deve ser uma string ou uma inst√¢ncia de ' .
+            throw new InvalidArgument('ServiÁo de postagem deve ser uma string ou uma inst‚ncia de ' .
                 '\PhpSigep\Model\ServicoDePostagem.');
         }
         

@@ -38,7 +38,7 @@ class Carta2016 extends AbstractChancela
         $pdf->SetFontSize($fontSize);
         $pdf->Cell($wRect, 23 / $k, $texto, 0, 2, 'C');
 
-        // NÃºmero contrato e DR
+        // Número contrato e DR
         $pdf->SetFont('', '', 7);
         $texto = $this->accessData->getNumeroContrato() . '/' . $this->accessData->getAnoContrato(
             ) . '-DR/' . $this->accessData->getDiretoria()->getSigla();

@@ -16,13 +16,13 @@ class ServicoAdicional extends AbstractModel
     const SERVICE_VALOR_DECLARADO       = self::SERVICE_VALOR_DECLARADO_SEDEX;
     
     /**
-     * CÃ³digo do serviÃ§o adicional Caractere (002) ObrigatÃ³rio.
+     * Código do serviço adicional Caractere (002) Obrigatório.
      * Uma das constantes {@link ServicoAdicional}::SERVICE_*.
      * @var int
      */
     protected $codigoServicoAdicional;
     /**
-     * Valor declarado do serviÃ§o adicional.
+     * Valor declarado do serviço adicional.
      * Usado epenas quando {@link ServicoAdicional::$codigoServicoAdicional} for igual a
      * {@link ServicoAdicional::SERVICE_MAO_PROPRIA}.
      * @var float

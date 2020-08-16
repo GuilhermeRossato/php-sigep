@@ -8,11 +8,11 @@ namespace PhpSigep\Model;
 class RastrearObjeto extends AbstractModel
 {
     /**
-     * O WebService retonarÃ¡ o rastreamento de cada objeto consultado.
+     * O WebService retonará o rastreamento de cada objeto consultado.
      */
     const TIPO_LISTA_DE_OBJETOS = 1;
     /**
-     * O WebService retornarÃ¡ o rastreamento de todos os objetos dentro do intervalo consultado.
+     * O WebService retornará o rastreamento de todos os objetos dentro do intervalo consultado.
      */
     const TIPO_INTERVALO_DE_OBJETOS = 2;
 
@@ -21,7 +21,7 @@ class RastrearObjeto extends AbstractModel
      */
     const TIPO_RESULTADO_TODOS_OS_EVENTOS = 1;
     /**
-     * O WebService vai retornar apenas o Ãºltimo evento dos objetos consultados. 
+     * O WebService vai retornar apenas o último evento dos objetos consultados. 
      */
     const TIPO_RESULTADO_APENAS_O_ULTIMO_EVENTO = 2;
 
@@ -31,17 +31,17 @@ class RastrearObjeto extends AbstractModel
     const EXIBIR_RESULTADOS_COM_ERRO = true;
 
     /**
-     * Na resposta nÃ£o traz os resultados com erro
+     * Na resposta não traz os resultados com erro
      */
     const ESCONDER_RESULTADOS_COM_ERRO = false;
 
     /**
-     * Exibe as informaÃ§Ãµes em PortuguÃªs do Brasil
+     * Exibe as informações em Português do Brasil
      */
     const IDIOMA_PT_BR = '101';
 
     /**
-     * Exibe as informaÃ§Ãµes em InglÃªs
+     * Exibe as informações em Inglês
      */
     const IDIOMA_EN = '102';
 
@@ -51,13 +51,13 @@ class RastrearObjeto extends AbstractModel
     protected $accessData;
 
     /**
-     * As etiquetas das encomendas que serÃ£o consultadas.
+     * As etiquetas das encomendas que serão consultadas.
      * @var Etiqueta[]
      */
     protected $etiquetas;
 
     /**
-     * DefiniÃ§Ã£o de como a lista de identificadores de objetos deverÃ¡ ser interpretada pelo servidor SRO.
+     * Definição de como a lista de identificadores de objetos deverá ser interpretada pelo servidor SRO.
      * @var int
      */
     protected $tipo = self::TIPO_LISTA_DE_OBJETOS;
@@ -69,13 +69,13 @@ class RastrearObjeto extends AbstractModel
     protected $tipoResultado = self::TIPO_RESULTADO_TODOS_OS_EVENTOS;
 
     /**
-     * Define o idioma no qual as informaÃ§Ãµes serÃ£o exibidas
+     * Define o idioma no qual as informações serão exibidas
      * @var string
      */
     protected $idioma = self::IDIOMA_PT_BR;
 
     /**
-     * Informa se no retorno deve trazer os resultados com erro ou nÃ£o
+     * Informa se no retorno deve trazer os resultados com erro ou não
      * @var bool
      */
     protected $exibirErros =  self::ESCONDER_RESULTADOS_COM_ERRO;

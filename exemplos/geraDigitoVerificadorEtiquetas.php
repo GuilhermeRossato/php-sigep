@@ -1,9 +1,9 @@
 <?php
 /**
- * Este exemplo mostra como usar o WebService do Correios para calcular o dÃ­gito verificador de uma etiqueta
+ * Este exemplo mostra como usar o WebService do Correios para calcular o dígito verificador de uma etiqueta
  * 
- * Porem, se preferir vocÃª pode usar o mÃ©todo {@linnk \PhpSigep\Model\Etiqueta::getDv() } para calcular o dÃ­gito
- * verificador, visto que esse mÃ©todo Ã© mais rÃ¡dido pois faz o cÃ¡lculo local sem precisar se comunicar com o WebService.
+ * Porem, se preferir você pode usar o método {@linnk \PhpSigep\Model\Etiqueta::getDv() } para calcular o dígito
+ * verificador, visto que esse método é mais rádido pois faz o cálculo local sem precisar se comunicar com o WebService.
  * 
  */
 
@@ -27,7 +27,7 @@ $result = $phpSigep->geraDigitoVerificadorEtiquetas($params);
 $etiquetasComDv = $result->getResult();
 foreach ($etiquetasComDv as $etiqueta) {
     echo '<strong>Etiqueta ' . $etiqueta->getEtiquetaSemDv() . '</strong> -> DV: ' . $etiqueta->getDv() . ' -> ' .
-        ' Etiqueta jÃ¡ com DV: ' . $etiqueta->getEtiquetaComDv() . '<br>';
+        ' Etiqueta já com DV: ' . $etiqueta->getEtiquetaComDv() . '<br>';
 }
 
 echo '<hr>';

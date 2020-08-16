@@ -4,9 +4,9 @@ require_once __DIR__ . '/bootstrap-exemplos.php';
 
 $dimensao = new \PhpSigep\Model\Dimensao();
 $dimensao->setTipo(\PhpSigep\Model\Dimensao::TIPO_PACOTE_CAIXA);
-$dimensao->setAltura(15); // em centÃ­metros
-$dimensao->setComprimento(17); // em centÃ­metros
-$dimensao->setLargura(12); // em centÃ­metros
+$dimensao->setAltura(15); // em centímetros
+$dimensao->setComprimento(17); // em centímetros
+$dimensao->setLargura(12); // em centímetros
 
 $params = new \PhpSigep\Model\CalcPrecoPrazo();
 $params->setAccessData(new \PhpSigep\Model\AccessDataHomologacao());

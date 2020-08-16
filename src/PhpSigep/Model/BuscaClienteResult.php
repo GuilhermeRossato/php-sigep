@@ -2,10 +2,10 @@
 namespace PhpSigep\Model;
 
 /**
- * O manual de implementa√ß√£o do Correios n√£o documenta todos os campos que o WebSevice retorna.
- * Todos os demais atributos que n√£o est√£o declarados nesta classe ser√£o inseridos em tempo de execu√ß√£o.
- * Use o m√©todo {@link BuscaClienteResult::toArray()} para ver todos os atributo criados dinamicamente ou use o 
- * m√©todo {@link BuscaClienteResult::get()} para obter o valor de um atributo espec√≠fico.
+ * O manual de implementaÁ„o do Correios n„o documenta todos os campos que o WebSevice retorna.
+ * Todos os demais atributos que n„o est„o declarados nesta classe ser„o inseridos em tempo de execuÁ„o.
+ * Use o mÈtodo {@link BuscaClienteResult::toArray()} para ver todos os atributo criados dinamicamente ou use o 
+ * mÈtodo {@link BuscaClienteResult::get()} para obter o valor de um atributo especÌfico.
  * 
  * @author: Stavarengo
  */

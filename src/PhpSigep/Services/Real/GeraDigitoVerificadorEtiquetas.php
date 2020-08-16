@@ -23,7 +23,7 @@ class GeraDigitoVerificadorEtiquetas
             'senha'     => $params->getAccessData()->getSenha(),
         );
 
-        // Ã‰ necessÃ¡rio garantir que o array estarÃ¡ indexado por order natural comeÃ§ando do zero para setarmos os
+        // É necessário garantir que o array estará indexado por order natural começando do zero para setarmos os
         // DV retornados pelo webservice.
         $etiquetas = array_values($params->getEtiquetas());
 
@@ -46,7 +46,7 @@ class GeraDigitoVerificadorEtiquetas
                 $result->setResult($etiquetas);
             } else {
                 $result->setErrorCode(0);
-                $result->setErrorMsg('A resposta do Correios nÃ£o estÃ¡ no formato esperado. Resposta recebida: "' .
+                $result->setErrorMsg('A resposta do Correios não está no formato esperado. Resposta recebida: "' .
                     $soapReturn . '"');
             }
         } catch (\Exception $e) {

@@ -1,7 +1,7 @@
 <?php
 
-// Altera as configuraÃ§Ãµes do PHP para mostrar todos os erros, jÃ¡ que este Ã© apenas um script de exemplo.
-// No seu ambiente de produÃ§Ã£o, vocÃª nÃ£o vai precisar alterar estas configuraÃ§Ãµes.
+// Altera as configurações do PHP para mostrar todos os erros, já que este é apenas um script de exemplo.
+// No seu ambiente de produção, você não vai precisar alterar estas configurações.
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 ini_set('error_reporting', 'E_ALL|E_STRICT');
@@ -15,7 +15,7 @@ if (file_exists($autoload)) {
 }
 if (!class_exists('PhpSigepFPDF')) {
     throw new RuntimeException(
-        'NÃ£o encontrei a classe PhpSigepFPDF. Execute "php composer.phar install" ou baixe o projeto ' .
+        'Não encontrei a classe PhpSigepFPDF. Execute "php composer.phar install" ou baixe o projeto ' .
         'https://github.com/stavarengo/php-sigep-fpdf manualmente e adicione a classe no seu path.'
     );
 }
@@ -31,7 +31,7 @@ $config->setCacheOptions(
         'storageOptions' => array(
             'enabled' => false,
             'ttl' => 10,// "time to live" de 10 segundos
-            'cacheDir' => sys_get_temp_dir(), // Opcional. Quando nÃ£o inforado Ã© usado o valor retornado de "sys_get_temp_dir()"
+            'cacheDir' => sys_get_temp_dir(), // Opcional. Quando não inforado é usado o valor retornado de "sys_get_temp_dir()"
         ),
     )
     
@@ -42,12 +42,12 @@ $config->setCacheOptions(
 //EXEMPLO CAPTURADO DO send4store/php-sigep
 
 $destinatario = new \PhpSigep\Model\Destinatario();
-$destinatario->setNome('UsuÃ¡rio DestinatÃ¡rio');
+$destinatario->setNome('Usuário Destinatário');
 $destinatario->setLogradouro('Avenida Morumbi');
 $destinatario->setNumero('2500');
 $destinatario->setComplemento('911');
 $destinatario->setReferencia('referencia de teste');
-$destinatario->setCidade('SÃ£o Paulo');
+$destinatario->setCidade('São Paulo');
 $destinatario->setUf('SP');
 $destinatario->setCep('05606200');
 $destinatario->setBairro('Morumbi');
@@ -55,7 +55,7 @@ $destinatario->setBairro('Morumbi');
 $destinatario->setEmail('teste@teste.com');
 
 $remetente = new \PhpSigep\Model\Remetente();
-$remetente->setNome('UsuÃ¡rio Remetente');
+$remetente->setNome('Usuário Remetente');
 $remetente->setLogradouro('Avenida Vicente Machado');
 $remetente->setNumero('15');
 $remetente->setComplemento('911');

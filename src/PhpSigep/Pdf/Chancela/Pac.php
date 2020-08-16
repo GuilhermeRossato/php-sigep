@@ -31,7 +31,7 @@ class Pac extends AbstractChancela
         $pdf->SetXY($x, $y + 4.5 / $k);
         $pdf->Cell($wRect, 27 / $k, 'PAC', 0, 2, 'C');
 
-        // NÃºmero contrato e DR
+        // Número contrato e DR
         $pdf->SetFont('', '', 6);
         $texto = $this->accessData->getNumeroContrato() . '/' . $this->accessData->getAnoContrato(
             ) . '-DR/' . $this->accessData->getDiretoria()->getSigla();

@@ -29,8 +29,8 @@ for($i=1;$i<=$pageCount;$i++) {
 
     switch ($mod) {
         case 0:
-            //A4: 210(x) Ã— 297(y)
-            //Letter: 216 (x) Ã— 279 (y)
+            //A4: 210(x) × 297(y)
+            //Letter: 216 (x) × 279 (y)
             $pdf->useTemplate($tplIdx, 110, 145, 105, 138, true);
 
             if ($i !== $pageCount) {

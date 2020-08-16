@@ -27,7 +27,7 @@ class CalcPrecoPrazo extends AbstractModel
     protected $cepDestino;
     /**
      * Peso da encomenda, incluindo sua embalagem. O peso deve ser informado em quilogramas.
-     * Se o formato for Envelope ({@link \PhpSigep\Model\Dimensao::TIPO_ENVELOPE}), o valor m√°ximo permitido ser√° 1 kg.
+     * Se o formato for Envelope ({@link \PhpSigep\Model\Dimensao::TIPO_ENVELOPE}), o valor m·ximo permitido ser· 1 kg.
      * @var float
      */
     protected $peso;
@@ -41,7 +41,7 @@ class CalcPrecoPrazo extends AbstractModel
     protected $servicosAdicionais;
 
     /**
-     * Quando true, o sistema altera o tamanho das dimens√µes se elas forem menor que o m√≠nimo permitido pelo
+     * Quando true, o sistema altera o tamanho das dimensıes se elas forem menor que o mÌnimo permitido pelo
      * correios.
      * @var bool
      */
@@ -177,7 +177,7 @@ class CalcPrecoPrazo extends AbstractModel
 
     /**
      * @param boolean $ajustarDimensaoMinima
-     *      Quando true, o sistema altera o tamanho das dimens√µes se elas forem menor que o m√≠nimo permitido pelo
+     *      Quando true, o sistema altera o tamanho das dimensıes se elas forem menor que o mÌnimo permitido pelo
      *      correios.
      * @return CalcPrecoPrazo
      */

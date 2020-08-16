@@ -8,7 +8,7 @@ class Remetente extends AbstractModel
 {
 
     /**
-     * NÃºmero do contrato do cliente.
+     * Número do contrato do cliente.
      * Max length: 20
      * @var string
      */
@@ -21,7 +21,7 @@ class Remetente extends AbstractModel
     protected $diretoria;
 
     /**
-     * CÃ³digo administrativo do cliente
+     * Código administrativo do cliente
      * Max length: 9
      * @var string
      */
@@ -42,21 +42,21 @@ class Remetente extends AbstractModel
     protected $logradouro;
 
     /**
-     * NÃºmero da casa, prÃ©dio, etc. Parte do endereÃ§o do remetente.
+     * Número da casa, prédio, etc. Parte do endereço do remetente.
      * Max length: 6
      * @var string
      */
     protected $numero;
 
     /**
-     * Complemento do endereÃ§o.
+     * Complemento do endereço.
      * Max length: 20
      * @var string
      */
     protected $complemento;
 
     /**
-     * Bairro do endereÃ§o.
+     * Bairro do endereço.
      * Max length: 20
      * @var string
      */
@@ -77,7 +77,7 @@ class Remetente extends AbstractModel
     protected $cidade;
 
     /**
-     * Unidade de federaÃ§Ã£o.
+     * Unidade de federação.
      * Max length: 2
      * @var string
      */

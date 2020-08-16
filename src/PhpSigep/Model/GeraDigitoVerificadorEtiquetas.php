@@ -9,7 +9,7 @@ class GeraDigitoVerificadorEtiquetas extends AbstractModel
 
     /**
      * Opcional.
-     * Quando n√£o informado ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     * Quando n„o informado ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      * @var AccessData
      */
     protected $accessData;
@@ -21,7 +21,7 @@ class GeraDigitoVerificadorEtiquetas extends AbstractModel
     /**
      * @param \PhpSigep\Model\AccessData $accessData
      *      Opcional.
-     *      Quando null ser√° usado o valor retornado pelo m√©todo {@link \PhpSigep\Bootstrap::getConfig() }
+     *      Quando null ser· usado o valor retornado pelo mÈtodo {@link \PhpSigep\Bootstrap::getConfig() }
      */
     public function setAccessData($accessData)
     {

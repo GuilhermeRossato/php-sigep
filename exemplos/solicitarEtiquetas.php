@@ -23,7 +23,7 @@ $phpSigep = new PhpSigep\Services\SoapClient\Real();
 <html lang="pt">
     <head>
         <meta charset="UTF-8">
-        <title>Exemplo de SolicitaÃ§Ã£o de Etiquetas - PHP Sigep</title>
+        <title>Exemplo de Solicitação de Etiquetas - PHP Sigep</title>
     </head>
     <body>
         <h1>Resposta</h1>

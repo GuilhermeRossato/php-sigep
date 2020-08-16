@@ -32,7 +32,7 @@ class RastrearObjeto
                 break;
             default:
                 throw new \PhpSigep\Services\Real\Exception\RastrearObjeto\TipoInvalidoException("Tipo '" . $params->getTipo(
-                    ) . "' nÃ£o Ã© valido");
+                    ) . "' não é valido");
                 break;
         }
         switch ($params->getTipoResultado()) {
@@ -44,7 +44,7 @@ class RastrearObjeto
                 break;
             default:
                 throw new \PhpSigep\Services\Real\Exception\RastrearObjeto\TipoResultadoInvalidoException("Tipo de resultado '" . $params->getTipo(
-                    ) . "' nÃ£o Ã© valido");
+                    ) . "' não é valido");
                 break;
         }
 
@@ -57,7 +57,7 @@ class RastrearObjeto
                 break;
             default:
                 throw new TipoInvalidoException("Tipo '" . $params->getExibirErros(
-                    ) . "' nÃ£o Ã© vÃ¡lido para esta opÃ§Ã£o'");
+                    ) . "' não é válido para esta opção'");
                 break;
         }
 
@@ -99,7 +99,7 @@ class RastrearObjeto
 
                         // Verifica se ocorreu algum erro ao consultar a etiqueta
                         if (isset($objeto->erro)) {
-                            // Se estiver configurado para nÃ£o exibir erros, nÃ£o insere os resultados com erros
+                            // Se estiver configurado para não exibir erros, não insere os resultados com erros
                             if (!$exibir_erro) {
                                 continue;
                             }
@@ -146,12 +146,12 @@ class RastrearObjeto
 
                 } catch (RastrearObjetoException $e) {
                     $result->setErrorCode(0);
-                    $result->setErrorMsg("Erro de comunicaÃ§Ã£o com o Correios ao tentar buscar os dados de rastreamento. Detalhes: " . $e->getMessage());
+                    $result->setErrorMsg("Erro de comunicação com o Correios ao tentar buscar os dados de rastreamento. Detalhes: " . $e->getMessage());
                 }
 
             } else {
                 $result->setErrorCode(0);
-                $result->setErrorMsg('A resposta do Correios nÃ£o estÃ¡ no formato esperado. Resposta recebida: "' .
+                $result->setErrorMsg('A resposta do Correios não está no formato esperado. Resposta recebida: "' .
                     $soapReturn . '"');
             }
         } catch (\Exception $e) {

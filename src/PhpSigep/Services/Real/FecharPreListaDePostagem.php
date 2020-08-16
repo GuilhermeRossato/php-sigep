@@ -59,7 +59,7 @@ class FecharPreListaDePostagem
                 $result->setResult(new FechaPlpVariosServicosRetorno(array('idPlp' => $r->return)));
             } else {
                 $result->setErrorCode(0);
-                $result->setErrorMsg('A resposta do Correios nÃ£o estÃ¡ no formato esperado. Resposta recebida: "' .
+                $result->setErrorMsg('A resposta do Correios não está no formato esperado. Resposta recebida: "' .
                     $r . '"');
             }
         } catch (\Exception $e) {
@@ -268,7 +268,7 @@ class FecharPreListaDePostagem
     {
         $writer->startElement('servico_adicional');
 
-        // De acordo com o manual este serviÃ§o Ã© obrigatÃ³rio
+        // De acordo com o manual este serviço é obrigatório
         $writer->writeElement('codigo_servico_adicional', ServicoAdicional::SERVICE_REGISTRO);
 
         foreach ($servicosAdicionais as $servicoAdicional) {

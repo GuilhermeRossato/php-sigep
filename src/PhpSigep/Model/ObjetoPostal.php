@@ -9,17 +9,17 @@ class ObjetoPostal extends AbstractModel
 
     /**
      * A etiqueta gerada para esta encomenda.
-     * NÃºmero da etiqueta completo, com o DV.
+     * Número da etiqueta completo, com o DV.
      * @var Etiqueta
      */
     protected $etiqueta;
     /**
-     * O serviÃ§o de postagem que serÃ¡ usado para enviar esta encomenda.
+     * O serviço de postagem que será usado para enviar esta encomenda.
      * @var ServicoDePostagem
      */
     protected $servicoDePostagem;
     /**
-     * Cubagem do Objeto. NÃ£o obrigatÃ³rio.
+     * Cubagem do Objeto. Não obrigatório.
      * @var float
      */
     protected $cubagem;
@@ -34,13 +34,13 @@ class ObjetoPostal extends AbstractModel
      */
     protected $destinatario;
     /**
-     * Dados do endereÃ§o de destino da encomenda.
+     * Dados do endereço de destino da encomenda.
      * Pode ser nacional ou internacional.
      * @var Destino
      */
     protected $destino;
     /**
-     * Lista de serviÃ§os adicionais usados nesta encomenda.
+     * Lista de serviços adicionais usados nesta encomenda.
      * @var ServicoAdicional[]
      */
     protected $servicosAdicionais;

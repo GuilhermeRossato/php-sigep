@@ -31,7 +31,7 @@ class SolicitarPostagemReversa implements RealServiceInterface
         try {
             if (!$params->getAccessData() || !$params->getAccessData()->getUsuario() || !$params->getAccessData()->getSenha()
             ) {
-                throw new Exception('Para usar este serviÃ§o vocÃª precisa setar o nome de usuÃ¡rio e senha.');
+                throw new Exception('Para usar este serviço você precisa setar o nome de usuário e senha.');
             }
             $params->getColetas_solicitadas()->getRemetente()->setNumeroContrato($params->getAccessData()->getNumeroContrato());
             $params->getColetas_solicitadas()->getRemetente()->setDiretoria($params->getAccessData()->getDiretoria());

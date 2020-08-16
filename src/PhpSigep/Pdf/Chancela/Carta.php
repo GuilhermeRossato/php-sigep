@@ -79,7 +79,7 @@ class Carta extends AbstractChancela
         $y2 = $y1 + .85 / $k;
         $pdf->Line($x1, $y1, $x2, $y2);
 
-        // NÃºmero contrato e DR
+        // Número contrato e DR
         $pdf->SetFont('', '', 6);
         $texto = $this->accessData->getNumeroContrato() . '/' . $this->accessData->getAnoContrato(
             ) . '-DR/' . $this->accessData->getDiretoria()->getSigla();

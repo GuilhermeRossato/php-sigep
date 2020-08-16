@@ -33,7 +33,7 @@ class ConsultarAgenciaResult extends AbstractModel
     protected $agencia;
 
     /**
-     * @var array armazena o resultado bruto, caso seja necess√°rio para outro fins
+     * @var array armazena o resultado bruto, caso seja necess·rio para outro fins
      */
     protected $resultArray;
     

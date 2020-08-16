@@ -14,9 +14,9 @@ use PhpSigep\Pdf\Chancela\Sedex2016;
 
 /**
  * @author: Stavarengo
- * @modify Anderson Luiz SilvÃ©rio <andersonlsilverio@gmail.com>
- * @modify JosÃ© Domingos Grieco <jdgrieco@gmail.com>
- * @modify Jonathan CÃ©lio da Silva <jonathan.clio@hotmail.com>
+ * @modify Anderson Luiz Silvério <andersonlsilverio@gmail.com>
+ * @modify José Domingos Grieco <jdgrieco@gmail.com>
+ * @modify Jonathan Célio da Silva <jonathan.clio@hotmail.com>
  */
 class CartaoDePostagem2016
 {
@@ -66,12 +66,12 @@ class CartaoDePostagem2016
      * @param int $idPlpCorreios
      * @param string $logoFile
      * @throws InvalidArgument
-     *      Se o arquivo $logoFile nÃ£o existir.
+     *      Se o arquivo $logoFile não existir.
      */
     public function __construct($plp, $idPlpCorreios, $logoFile, $chancelas = array())
     {
         if ($logoFile && !@getimagesize($logoFile)) {
-            throw new InvalidArgument('O arquivo "' . $logoFile . '" nÃ£o existe.');
+            throw new InvalidArgument('O arquivo "' . $logoFile . '" não existe.');
         }
 
         $this->plp = $plp;
@@ -127,7 +127,7 @@ class CartaoDePostagem2016
     private function _render ($dest='', $fileName= '')
     {
         $wFourAreas = $this->pdf->w;
-        $hFourAreas = $this->pdf->h; //-Menos 1.5CM porque algumas impressoras nÃ£o conseguem imprimir nos ultimos 1cm da pÃ¡gina
+        $hFourAreas = $this->pdf->h; //-Menos 1.5CM porque algumas impressoras não conseguem imprimir nos ultimos 1cm da página
         $tMarginFourAreas = 0;
         $rMarginFourAreas = 0;
         $bMarginFourAreas = 0;
@@ -171,7 +171,7 @@ class CartaoDePostagem2016
                 $this->pdf->SetXY($lMarginFourAreas, $hFourAreas - $this->pdf->getLineHeigth());
                 $this->pdf->MultiCellXp(
                     $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                    "SimulaÃ§Ã£o Documento sem valor",
+                    "Simulação Documento sem valor",
                     null,
                     0,
                     'C'
@@ -182,7 +182,7 @@ class CartaoDePostagem2016
                 );
                 $this->pdf->MultiCellXp(
                     $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                    "SimulaÃ§Ã£o Documento sem valor",
+                    "Simulação Documento sem valor",
                     null,
                     0,
                     'C'
@@ -328,7 +328,7 @@ class CartaoDePostagem2016
                 $this->pdf->SetXY(70, 25);
                 $this->t(15, '   Peso(g): ' . round($objetoPostal->getPeso()*1000), 1, 'R',  null);
 
-                // NÃºmero da etiqueta
+                // Número da etiqueta
                 $this->setFillColor(100, 100, 200);
                 $this->pdf->SetXY(0, $this->pdf->GetY() + 3);
                 $this->pdf->SetFontSize(9);
@@ -336,7 +336,7 @@ class CartaoDePostagem2016
                 $etiquetaComDv = $objetoPostal->getEtiqueta()->getEtiquetaComDv();
                 $this->t($wInnerFourAreas, $etiquetaComDv, 1, 'C');
 
-                // CÃ³digo de barras da etiqueta
+                // Código de barras da etiqueta
                 $this->setFillColor(0, 0, 0);
                 $tPosEtiquetaBarCode = $this->pdf->GetY();
 
@@ -356,11 +356,11 @@ class CartaoDePostagem2016
                 // Nome legivel, doc e rubrica
                 $this->pdf->SetFontSize(7);
                 $this->pdf->SetXY(3, $this->pdf->GetY() + 24);
-                $this->t(0, 'Nome LegÃ­vel:___________________________________________', 1, 'L',  null);
+                $this->t(0, 'Nome Legível:___________________________________________', 1, 'L',  null);
                 $this->pdf->SetXY(3, $this->pdf->GetY() + 1);
                 $this->t(0, 'Documento:______________________________________________', 1, 'L',  null);
 
-                // DestinatÃ¡rio
+                // Destinatário
                 $wAddressLeftCol = $this->pdf->w - 5;
 
                 $tPosAfterNameBlock = 71;
@@ -374,14 +374,14 @@ class CartaoDePostagem2016
 
                 $destino = $objetoPostal->getDestino();
 
-                // ObservaÃ§Ãµes
+                // Observações
                 $observacoes = $objetoPostal->getObservacao();
                 if (!empty($observacoes)) {
                     $this->pdf->SetXY(55, $this->pdf->GetY() + 1);
                     $this->multiLines(40, 'Obs: ' . $observacoes, 'L', null);
                 }
 
-                // NÃºmero do CEP
+                // Número do CEP
                 $cep = $destino->getCep();
                 $cep = preg_replace('/[^\d]/', '', $cep);
 
@@ -456,7 +456,7 @@ class CartaoDePostagem2016
     private function _($str)
     {
         $replaces = array(
-            'Ä' => 'a',
+            '?' => 'a',
         );
         $str = str_replace(array_keys($replaces), array_values($replaces), $str);
         if (extension_loaded('iconv')) {
@@ -489,7 +489,7 @@ class CartaoDePostagem2016
         $t1 = $this->pdf->GetY();
         $l = 2;
 
-        $titulo = 'DestinatÃ¡rio';
+        $titulo = 'Destinatário';
         $nomeDestinatario = $objetoPostal->getDestinatario()->getNome();
         $logradouro = $objetoPostal->getDestinatario()->getLogradouro();
         $numero = $objetoPostal->getDestinatario()->getNumero();
@@ -612,7 +612,7 @@ class CartaoDePostagem2016
         $address1 = $logradouro;
         $numero = $numero1;
         if ($numero === 0 || strtolower($numero) == 'sn') {
-            $address1 .= ', s/ nÂº';
+            $address1 .= ', s/ nº';
         } elseif (!empty($numero)) {
             $address1 .= ', ' . $numero;
         }

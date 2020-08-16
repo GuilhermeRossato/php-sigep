@@ -38,8 +38,8 @@ class BuscaCliente implements RealServiceInterface
             if (!$params->getUsuario() || !$params->getSenha() || !$params->getNumeroContrato()
                 || !$params->getCartaoPostagem()
             ) {
-                throw new Exception('Para usar este serviÃ§o vocÃª precisa setar o nome de usuÃ¡rio, a senha, o numero ' .
-                    'do contrato e o nÃºmero do cartÃ£o de postagem.');
+                throw new Exception('Para usar este serviço você precisa setar o nome de usuário, a senha, o numero ' .
+                    'do contrato e o número do cartão de postagem.');
             }
 
             $r = SoapClientFactory::getSoapClient()->buscaCliente($soapArgs);

@@ -2,7 +2,7 @@
 namespace PhpSigep\Pdf;
 /**
  * @author: Stavarengo
- * @modify Anderson Luiz SilvÃ©rio <andersonlsilverio@gmail.com>
+ * @modify Anderson Luiz Silvério <andersonlsilverio@gmail.com>
  */
 class ImprovedFPDF extends \PhpSigepFPDF
 {

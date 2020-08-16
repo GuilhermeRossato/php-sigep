@@ -40,12 +40,12 @@ class CartaoDePostagem2018
      * @param int $idPlpCorreios
      * @param string $logoFile
      * @throws InvalidArgument
-     *      Se o arquivo $logoFile nÃ£o existir.
+     *      Se o arquivo $logoFile não existir.
      */
     public function __construct($plp, $idPlpCorreios, $logoFile, $chancelas = array())
     {
         if ($logoFile && !@getimagesize($logoFile)) {
-            throw new InvalidArgument('O arquivo "' . $logoFile . '" nÃ£o existe.');
+            throw new InvalidArgument('O arquivo "' . $logoFile . '" não existe.');
         }
 
         $this->plp = $plp;
@@ -84,7 +84,7 @@ class CartaoDePostagem2018
     {
         $un = 72 / 25.4;
         $wFourAreas = $this->pdf->w;
-        $hFourAreas = $this->pdf->h; //-Menos 1.5CM porque algumas impressoras nÃ£o conseguem imprimir nos ultimos 1cm da pÃ¡gina
+        $hFourAreas = $this->pdf->h; //-Menos 1.5CM porque algumas impressoras não conseguem imprimir nos ultimos 1cm da página
         $tMarginFourAreas = 0;
         $rMarginFourAreas = 0;
         $bMarginFourAreas = 0;
@@ -129,7 +129,7 @@ class CartaoDePostagem2018
                 $this->pdf->SetXY($lMarginFourAreas, $hFourAreas - $this->pdf->getLineHeigth());
                 $this->pdf->MultiCellXp(
                     $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                    "SimulaÃ§Ã£o Documento sem valor",
+                    "Simulação Documento sem valor",
                     null,
                     0,
                     'C'
@@ -140,7 +140,7 @@ class CartaoDePostagem2018
                 );
                 $this->pdf->MultiCellXp(
                     $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                    "SimulaÃ§Ã£o Documento sem valor",
+                    "Simulação Documento sem valor",
                     null,
                     0,
                     'C'
@@ -297,7 +297,7 @@ class CartaoDePostagem2018
             $this->t(15, round($objetoPostal->getPeso()*1000), 1, 'L', null);
             $this->pdf->SetFont('');
 
-            // NÃºmero da etiqueta
+            // Número da etiqueta
             $Yetiqueta = $this->pdf->GetY() + 1;
             $this->setFillColor(100, 100, 200);
             $this->pdf->SetXY(0, $Yetiqueta);
@@ -312,7 +312,7 @@ class CartaoDePostagem2018
 
             $this->t(85, $etiquetaFormatada, 2, 'C');
 
-            // CÃ³digo de barras da etiqueta
+            // Código de barras da etiqueta
             $this->setFillColor(0, 0, 0);
             $tPosEtiquetaBarCode = $this->pdf->GetY();
 
@@ -367,7 +367,7 @@ class CartaoDePostagem2018
                     $_hupdate += 5;
                 }
 
-                // Siglas ServiÃ§os Adicionais
+                // Siglas Serviços Adicionais
                 $this->pdf->SetXY($_winit, $_hupdate);
                 $this->pdf->SetFont('Arial', 'B', 11);
                 $this->t(10, $_sigla, 0, 'L', null);
@@ -384,7 +384,7 @@ class CartaoDePostagem2018
             $this->t(0, 'Assinatura: ______________________ Documento: ____________', 1, 'L', null);
             $this->t(0, '', 1, 'L', null);
 
-            // DestinatÃ¡rio
+            // Destinatário
             $wAddressLeftCol = $this->pdf->w - 5;
 
             $tPosAfterNameBlock = 71;
@@ -397,7 +397,7 @@ class CartaoDePostagem2018
             );
 
             $currentY = $this->pdf->GetY();
-            // ObservaÃ§Ãµes
+            // Observações
             $observacoes = $objetoPostal->getObservacao();
             if (!empty($observacoes)) {
                 $this->pdf->SetFontSize(9);
@@ -407,7 +407,7 @@ class CartaoDePostagem2018
 
             $destino = $objetoPostal->getDestino();
 
-            // NÃºmero do CEP
+            // Número do CEP
             $cep = $destino->getCep();
             $cep = preg_replace('/[^\d]/', '', $cep);
 
@@ -467,7 +467,7 @@ class CartaoDePostagem2018
     private function _($str)
     {
         $replaces = array(
-            'Ä' => 'a',
+            '?' => 'a',
         );
         $str = str_replace(array_keys($replaces), array_values($replaces), $str);
         if (extension_loaded('iconv')) {
@@ -500,7 +500,7 @@ class CartaoDePostagem2018
         $t1 = $this->pdf->GetY();
         $l = 0;
 
-        $titulo = 'DESTINATÃRIO';
+        $titulo = 'DESTINATÁRIO';
         $nomeDestinatario = $objetoPostal->getDestinatario()->getNome();
         $logradouro = $objetoPostal->getDestinatario()->getLogradouro();
         $numero = $objetoPostal->getDestinatario()->getNumero();
@@ -652,7 +652,7 @@ class CartaoDePostagem2018
         $address1 = $logradouro;
         $numero = $numero1;
         if (!$numero || strtolower($numero) == 'sn') {
-            $address1 .= ', s/ nÂº';
+            $address1 .= ', s/ nº';
         } else {
             $address1 .= ', ' . $numero;
         }

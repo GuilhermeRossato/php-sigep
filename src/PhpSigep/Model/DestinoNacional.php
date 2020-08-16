@@ -26,73 +26,73 @@ class DestinoNacional extends AbstractModel implements Destino
      */
     protected $cidade;
     /**
-     * Unidade de federa√ß√£o.
+     * Unidade de federaÁ„o.
      * Max length: 2
      * @var string
      */
     protected $uf;
 //	/**
-//	 * C√≥digo do usu√°rio postal 
-//	 * N√£o obrigat√≥rio
+//	 * CÛdigo do usu·rio postal 
+//	 * N„o obrigatÛrio
 //	 * Max length: 20
 //	 * @var string
 //	 */
 //	protected $codigoUsuarioPostal;
 //	/**
 //	 * Centro de custo do cliente 
-//	 * N√£o obrigat√≥rio
+//	 * N„o obrigatÛrio
 //	 * Max length: 20
 //	 * @var string
 //	 */
 //	protected $centroCustoCliente;
     /**
-     * N√∫mero do pedido
+     * N˙mero do pedido
      * Opcional.
      * @var int
      */
     protected $numeroPedido;
     /**
-     * N√∫mero da nota fiscal
+     * N˙mero da nota fiscal
      * Opcional.
      * @var int
      */
     protected $numeroNotaFiscal;
     /**
-     * S√©rie da nota fiscal
-     * N√£o obrigat√≥rio
+     * SÈrie da nota fiscal
+     * N„o obrigatÛrio
      * Max length: 20
      * @var string
      */
     protected $serieNotaFiscal;
     /**
-     * Valor da nota fiscal Num√©rico(9,2) N√£o obrigat√≥rio
+     * Valor da nota fiscal NumÈrico(9,2) N„o obrigatÛrio
      * @var float
      */
     protected $valorNotaFiscal;
     /**
      * Natureza da nota fiscal
-     * N√£o obrigat√≥rio
+     * N„o obrigatÛrio
      * Max length: 20
      * @var string
      */
     protected $naturezaNotaFiscal;
     /**
-     * Descri√ß√£o do objeto
-     * N√£o obrigat√≥rio
+     * DescriÁ„o do objeto
+     * N„o obrigatÛrio
      * Max length: 20
      * @var string
      */
     protected $descricaoObjeto;
     /**
-     * Valor a cobrar do destinat√°rio
-     * No manual est√° escrito que √© obrigat√≥rio para o servi√ßo 40126, porem no mesmo manual n√£o existe nada relacionado
+     * Valor a cobrar do destinat·rio
+     * No manual est· escrito que È obrigatÛrio para o serviÁo 40126, porem no mesmo manual n„o existe nada relacionado
      * ao servico 40126.
      * @var float
      */
     protected $valorACobrar;
 
     /**
-     * Agencia destinat√°ria.
+     * Agencia destinat·ria.
      * Max length: 30
      * @var string
      */

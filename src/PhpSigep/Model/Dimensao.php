@@ -16,29 +16,29 @@ class Dimensao extends AbstractModel
      */
     protected $tipo;
     /**
-     * Em centÃ­metros.
+     * Em centímetros.
      * @var float
      */
     protected $altura;
     /**
-     * Em centÃ­metros.
+     * Em centímetros.
      * @var float
      */
     protected $largura;
     /**
-     * Em centÃ­metros.
+     * Em centímetros.
      * @var float
      */
     protected $comprimento;
     /**
-     * Em centÃ­metros.
+     * Em centímetros.
      * @var float
      */
     protected $diametro;
 
     /**
      * @param float $altura
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function setAltura($altura)
     {
@@ -47,7 +47,7 @@ class Dimensao extends AbstractModel
 
     /**
      * @return float
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function getAltura()
     {
@@ -56,7 +56,7 @@ class Dimensao extends AbstractModel
 
     /**
      * @param float $comprimento
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function setComprimento($comprimento)
     {
@@ -65,7 +65,7 @@ class Dimensao extends AbstractModel
 
     /**
      * @return float
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function getComprimento()
     {
@@ -74,7 +74,7 @@ class Dimensao extends AbstractModel
 
     /**
      * @param float $diametro
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function setDiametro($diametro)
     {
@@ -83,7 +83,7 @@ class Dimensao extends AbstractModel
 
     /**
      * @return float
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function getDiametro()
     {
@@ -92,7 +92,7 @@ class Dimensao extends AbstractModel
 
     /**
      * @param float $largura
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function setLargura($largura)
     {
@@ -101,7 +101,7 @@ class Dimensao extends AbstractModel
 
     /**
      * @return float
-     *      Em centÃ­metros
+     *      Em centímetros
      */
     public function getLargura()
     {

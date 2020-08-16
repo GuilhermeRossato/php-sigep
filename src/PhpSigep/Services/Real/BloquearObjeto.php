@@ -38,7 +38,7 @@ class BloquearObjeto
             $result->setResult($status);
         } else {
             $errorCode = 0;
-            $errorMsg = "A resposta do Correios nÃ£o estÃ¡ no formato esperado.";
+            $errorMsg = "A resposta do Correios não está no formato esperado.";
         }
 
         $result->setErrorCode($errorCode);

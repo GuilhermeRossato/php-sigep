@@ -10,10 +10,10 @@ if (!$result->hasError()) {
     /** @var $buscaClienteResult \PhpSigep\Model\BuscaClienteResult */
     $buscaClienteResult = $result->getResult();
 
-    // Anula as chancelas antes de imprimir o resultado, porque as chancelas nÃ£o estÃ£o em liguagem humana
+    // Anula as chancelas antes de imprimir o resultado, porque as chancelas não estão em liguagem humana
     $servicos = $buscaClienteResult->getContratos()->cartoesPostagem->servicos;
     foreach ($servicos as &$servico) {
-        $servico->servicoSigep->chancela->chancela = 'Chancelas anulada via cÃ³digo.';
+        $servico->servicoSigep->chancela->chancela = 'Chancelas anulada via código.';
     }
 }
 

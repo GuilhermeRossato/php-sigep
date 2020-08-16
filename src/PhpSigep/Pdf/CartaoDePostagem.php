@@ -13,8 +13,8 @@ use PhpSigep\Pdf\Chancela\Sedex2016;
 
 /**
  * @author: Stavarengo
- * @modify JosÃ© Domingos Grieco <jdgrieco@gmail.com>
- * @modify Jonathan CÃ©lio da Silva <jonathan.clio@hotmail.com>
+ * @modify José Domingos Grieco <jdgrieco@gmail.com>
+ * @modify Jonathan Célio da Silva <jonathan.clio@hotmail.com>
  */
 class CartaoDePostagem
 {
@@ -60,8 +60,8 @@ class CartaoDePostagem
      */
     private $layoutCarta = 'carta';
     /**
-     * Gerar etiquetas para o mesmo destinatÃ¡rio
-     * IrÃ¡ gerar na etiqueta a escrita: Volume 1 de 2, volume 2 de 2.
+     * Gerar etiquetas para o mesmo destinatário
+     * Irá gerar na etiqueta a escrita: Volume 1 de 2, volume 2 de 2.
      * @var boolean $envioMesmoDestinatario
      */
     private $envioMesmoDestinatario = true;
@@ -70,12 +70,12 @@ class CartaoDePostagem
      * @param int $idPlpCorreios
      * @param string $logoFile
      * @throws InvalidArgument
-     *      Se o arquivo $logoFile nÃ£o existir.
+     *      Se o arquivo $logoFile não existir.
      */
     public function __construct($plp, $idPlpCorreios, $logoFile, $chancelas = array())
     {
         if ($logoFile && !@getimagesize($logoFile)) {
-            throw new InvalidArgument('O arquivo "' . $logoFile . '" nÃ£o existe.');
+            throw new InvalidArgument('O arquivo "' . $logoFile . '" não existe.');
         }
 
         $this->plp = $plp;
@@ -129,7 +129,7 @@ class CartaoDePostagem
     {
         $un = 72 / 25.4;
         $wFourAreas = $this->pdf->w;
-        $hFourAreas = $this->pdf->h; //-Menos 1.5CM porque algumas impressoras nÃ£o conseguem imprimir nos ultimos 1cm da pÃ¡gina
+        $hFourAreas = $this->pdf->h; //-Menos 1.5CM porque algumas impressoras não conseguem imprimir nos ultimos 1cm da página
         $tMarginFourAreas = 0;
         $rMarginFourAreas = 0;
         $bMarginFourAreas = 0;
@@ -176,7 +176,7 @@ class CartaoDePostagem
                 $this->pdf->SetXY($lMarginFourAreas, $hFourAreas - $this->pdf->getLineHeigth());
                 $this->pdf->MultiCellXp(
                     $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                    "SimulaÃ§Ã£o Documento sem valor",
+                    "Simulação Documento sem valor",
                     null,
                     0,
                     'C'
@@ -187,7 +187,7 @@ class CartaoDePostagem
                 );
                 $this->pdf->MultiCellXp(
                     $this->pdf->w - $this->pdf->lMargin - $this->pdf->rMargin,
-                    "SimulaÃ§Ã£o Documento sem valor",
+                    "Simulação Documento sem valor",
                     null,
                     0,
                     'C'
@@ -319,16 +319,16 @@ class CartaoDePostagem
                     $chancela->draw($this->pdf);
                 }
 
-                // TÃ­tulo da etiqueta
+                // Título da etiqueta
                 if($this->idPlpCorreios > 0) {
                     $lPosHeaderCol2 = $headerColWidth + $lPosFourAreas;
                     // $this->pdf->SetXY($lPosHeaderCol2, $tPosFourAreas);
                     // $this->setFillColor(200, 200, 200);
                     // $this->pdf->SetFontSize(12);
                     // $this->pdf->SetFont('', 'B');
-                    // $this->t($headerColWidth, 'CartÃ£o de Postagem', 2, 'C');
+                    // $this->t($headerColWidth, 'Cartão de Postagem', 2, 'C');
 
-                    // NÃºmero da plp
+                    // Número da plp
                     $this->pdf->SetXY($lPosHeaderCol2, $tPosFourAreas + 32);
                     $this->setFillColor(150, 200, 200);
                     $this->pdf->SetFont('', '');
@@ -359,7 +359,7 @@ class CartaoDePostagem
                     $this->t($this->pdf->w, 'Peso(kg): ' . ((float)$objetoPostal->getPeso()) . $nf . $numeroPedido, 1, 'C',  null);
                 }
 
-                // NÃºmero da etiqueta
+                // Número da etiqueta
                 $this->setFillColor(100, 100, 200);
                 $this->pdf->SetXY(0, $this->pdf->GetY() + 1);
                 $this->pdf->SetFontSize(9);
@@ -367,7 +367,7 @@ class CartaoDePostagem
                 $etiquetaComDv = $objetoPostal->getEtiqueta()->getEtiquetaComDv();
                 $this->t($wInnerFourAreas, $etiquetaComDv, 1, 'C');
 
-                // CÃ³digo de barras da etiqueta
+                // Código de barras da etiqueta
                 $this->setFillColor(0, 0, 0);
                 $tPosEtiquetaBarCode = $this->pdf->GetY();
 
@@ -388,11 +388,11 @@ class CartaoDePostagem
                 //
                 $this->pdf->SetFontSize(7);
                 $this->pdf->SetXY(3, $this->pdf->GetY() + 23);
-                $this->t(0, 'Nome LegÃ­vel:___________________________________________',1, 'L',  null);
+                $this->t(0, 'Nome Legível:___________________________________________',1, 'L',  null);
                 $this->pdf->SetXY(3, $this->pdf->GetY() + 1);
                 $this->t(0, 'Documento:_______________________Rubrica:_____________________',1, 'L',  null);
 
-                // DestinatÃ¡rio
+                // Destinatário
                 $wAddressLeftCol = $this->pdf->w - 5;
 
                 $tPosAfterNameBlock = 71 ;
@@ -408,7 +408,7 @@ class CartaoDePostagem
 
                 if ($destino instanceof \PhpSigep\Model\DestinoNacional) {
 
-                    // NÃºmero do CEP
+                    // Número do CEP
                     $cep = $destino->getCep();
                     $cep = preg_replace('/[^\d]/', '', $cep);
 
@@ -496,7 +496,7 @@ class CartaoDePostagem
     private function _($str)
     {
         $replaces = array(
-            'Ä' => 'a',
+            '?' => 'a',
         );
         $str = str_replace(array_keys($replaces), array_values($replaces), $str);
         if (extension_loaded('iconv')) {
@@ -522,7 +522,7 @@ class CartaoDePostagem
      */
     private function writeDestinatario($l, $t, $w, $objetoPostal)
     {
-        $titulo = 'DestinatÃ¡rio';
+        $titulo = 'Destinatário';
         $nomeDestinatario = $objetoPostal->getDestinatario()->getNome();
         $logradouro = $objetoPostal->getDestinatario()->getLogradouro();
         $numero = $objetoPostal->getDestinatario()->getNumero();
@@ -631,7 +631,7 @@ class CartaoDePostagem
         $address1 = $logradouro;
         $numero = $numero1;
         if (!$numero || strtolower($numero) == 'sn') {
-            $address1 .= ', s/ nÂº';
+            $address1 .= ', s/ nº';
         } else {
             $address1 .= ', ' . $numero;
         }

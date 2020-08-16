@@ -29,7 +29,7 @@ abstract class DefaultStdClass
         }
 
         if ($this->_failIfAtributeNotExiste) {
-            throw new InvalidArgument('N√£o existe um m√©todo para definir o valor do atributo "'
+            throw new InvalidArgument('N„o existe um mÈtodo para definir o valor do atributo "'
                 . get_class($this) . '::' . $attributeName . '"');
         }
         
@@ -53,7 +53,7 @@ abstract class DefaultStdClass
         }
 
         if ($this->_failIfAtributeNotExiste) {
-            throw new InvalidArgument('N√£o existe um m√©todo para retornar o valor do atributo: "'
+            throw new InvalidArgument('N„o existe um mÈtodo para retornar o valor do atributo: "'
                 . $attributeName . '"');
         }
         
@@ -82,7 +82,7 @@ abstract class DefaultStdClass
                     $val = $value->get($var);
                 }
             } catch (InvalidArgument $e) {
-                // Ignora essa propiedade se ela n√£o tiver um m√©todo get definido.
+                // Ignora essa propiedade se ela n„o tiver um mÈtodo get definido.
                 continue;
             }
 
