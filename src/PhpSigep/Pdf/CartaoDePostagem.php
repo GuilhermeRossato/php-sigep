@@ -340,7 +340,7 @@ class CartaoDePostagem
                 $this->setFillColor(100, 150, 200);
                 $this->pdf->SetXY(0, 30);
 
-                $nf = (float)$objetoPostal->getDestino()->getNumeroNotaFiscal();
+                $nf = $objetoPostal->getDestino()->getNumeroNotaFiscal();
                 if($nf > 0) {
                     $nf = '    NF: '. $nf;
                 } else {
@@ -718,7 +718,7 @@ class CartaoDePostagem
         $str .= $msg;
         return $str;
     }
-    
+
     public function getEnvioMesmoDestinatario() {
         return $this->envioMesmoDestinatario;
     }
@@ -726,5 +726,5 @@ class CartaoDePostagem
         $this->envioMesmoDestinatario = $envioMesmoDestinatario;
         return $this;
     }
-    
+
 }

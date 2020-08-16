@@ -251,7 +251,7 @@ class CartaoDePostagem2016
                     case ServicoDePostagem::SERVICE_SEDEX_CONTRATO_GRANDES_FORMATOS_LM:
                     case ServicoDePostagem::SERVICE_SEDEX_CONTRATO_AGENCIA_TA:
                     case ServicoDePostagem::SERVICE_SEDEX_CONTRATO_AGENCIA_03220:
-                    case ServicoDePostagem::SERVICE_SEDEX_CONTRATO_AGENCIA_03050:                                                
+                    case ServicoDePostagem::SERVICE_SEDEX_CONTRATO_AGENCIA_03050:
                         $tPosChancela = 3;
                         if ($this->layoutSedex === CartaoDePostagem::TYPE_CHANCELA_SEDEX) {
                             $chancela = new Sedex($lPosChancela, $tPosChancela, $nomeRemetente, Sedex::SERVICE_SEDEX, $accessData);
@@ -316,7 +316,7 @@ class CartaoDePostagem2016
                 $this->pdf->SetFontSize(8);
 
                 $this->pdf->SetXY(0, 25);
-                $nf = (int)$objetoPostal->getDestino()->getNumeroNotaFiscal();
+                $nf = $objetoPostal->getDestino()->getNumeroNotaFiscal();
                 $str = $nf > 0 ?  '      NF: '. $nf : '               ';
                 $this->t(15, $str, 2, 'L',  null);
                 $this->pdf->SetXY(0, 28);
